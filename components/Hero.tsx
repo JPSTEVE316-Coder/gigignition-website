@@ -96,9 +96,12 @@ export default function Hero() {
             Download Free
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="flex items-center justify-center gap-3 bg-white/5 text-white px-8 py-4 rounded-full font-orbitron font-semibold text-base border border-white/[0.15] hover:bg-white/10 hover:border-white/25 transition-all backdrop-blur-sm">
+          <a 
+            href="#demo"
+            className="flex items-center justify-center gap-3 bg-white/5 text-white px-8 py-4 rounded-full font-orbitron font-semibold text-base border border-white/[0.15] hover:bg-white/10 hover:border-white/25 transition-all backdrop-blur-sm"
+          >
             See How It Works
-          </button>
+          </a>
         </motion.div>
 
         {/* Stats */}
