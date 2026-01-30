@@ -235,79 +235,76 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Comparison Table */}
+        {/* Comparison Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-bg-card border border-white/[0.08] rounded-2xl p-6 lg:p-8 mb-10"
+          className="bg-bg-card border border-white/[0.08] rounded-2xl p-5 lg:p-8 mb-10"
         >
           <h3 className="font-orbitron font-bold text-xl text-center mb-6">
             Why PAYG <span className="text-neon-green">Wins</span>
           </h3>
           
-          <div className="overflow-x-auto mb-6">
-            <table className="w-full min-w-[500px]">
-              <thead>
-                <tr className="border-b border-white/[0.08]">
-                  <th className="text-left py-3 text-white/50 font-semibold text-sm"></th>
-                  <th className="text-center py-3 text-neon-orange font-orbitron font-bold text-sm w-32">Subscription Apps</th>
-                  <th className="text-center py-3 text-neon-green font-orbitron font-bold text-sm w-32">Gig Ignition</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparison.map((row, i) => (
-                  <tr key={i} className="border-b border-white/[0.05]">
-                    <td className="py-3 text-white/70 text-sm font-medium">{row.feature}</td>
-                    <td className="py-3 text-center">
-                      {typeof row.them === 'boolean' ? (
-                        row.them ? <X className="w-5 h-5 text-neon-orange mx-auto" /> : <Check className="w-5 h-5 text-white/20 mx-auto" />
-                      ) : (
-                        <span className="text-neon-orange text-sm font-medium">{row.them}</span>
-                      )}
-                    </td>
-                    <td className="py-3 text-center">
-                      {typeof row.us === 'boolean' ? (
-                        row.us ? <Check className="w-5 h-5 text-neon-green mx-auto" /> : <X className="w-5 h-5 text-white/20 mx-auto" />
-                      ) : (
-                        <span className="text-neon-green text-sm font-medium">{row.us}</span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Mobile-friendly comparison cards */}
+          <div className="space-y-3 mb-8">
+            {comparison.map((row, i) => (
+              <div key={i} className="bg-midnight/50 rounded-xl p-4 border border-white/[0.05]">
+                <p className="text-white/80 font-semibold text-sm mb-3">{row.feature}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="text-center p-2 rounded-lg bg-neon-orange/10 border border-neon-orange/20">
+                    <p className="text-[10px] text-neon-orange/60 uppercase tracking-wider mb-1">Them</p>
+                    {typeof row.them === 'boolean' ? (
+                      row.them ? <X className="w-5 h-5 text-neon-orange mx-auto" /> : <Check className="w-5 h-5 text-white/30 mx-auto" />
+                    ) : (
+                      <span className="text-neon-orange text-xs font-semibold">{row.them}</span>
+                    )}
+                  </div>
+                  <div className="text-center p-2 rounded-lg bg-neon-green/10 border border-neon-green/20">
+                    <p className="text-[10px] text-neon-green/60 uppercase tracking-wider mb-1">Us</p>
+                    {typeof row.us === 'boolean' ? (
+                      row.us ? <Check className="w-5 h-5 text-neon-green mx-auto" /> : <X className="w-5 h-5 text-white/30 mx-auto" />
+                    ) : (
+                      <span className="text-neon-green text-xs font-semibold">{row.us}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Annual Savings */}
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-2">Casual User (2 cards/mo)</p>
-              <div className="flex items-end gap-3">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-3">Casual User (2 cards/mo)</p>
+              <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
-                  <p className="text-xs text-white/40">Subscription apps</p>
+                  <p className="text-[10px] text-white/40">Subscription apps</p>
                 </div>
-                <div className="text-right flex-1">
+                <div className="text-2xl text-white/30">→</div>
+                <div className="text-right">
                   <p className="font-orbitron text-2xl font-bold text-neon-green">~$12/yr</p>
-                  <p className="text-xs text-white/40">Gig Ignition</p>
+                  <p className="text-[10px] text-white/40">Gig Ignition</p>
                 </div>
               </div>
             </div>
             <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-2">Active User (4 cards + reshuffles/mo)</p>
-              <div className="flex items-end gap-3">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-3">Active User (4 cards/mo)</p>
+              <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
-                  <p className="text-xs text-white/40">Subscription apps</p>
+                  <p className="text-[10px] text-white/40">Subscription apps</p>
                 </div>
-                <div className="text-right flex-1">
+                <div className="text-2xl text-white/30">→</div>
+                <div className="text-right">
                   <p className="font-orbitron text-2xl font-bold text-neon-green">~$30/yr</p>
-                  <p className="text-xs text-white/40">Gig Ignition</p>
+                  <p className="text-[10px] text-white/40">Gig Ignition</p>
                 </div>
               </div>
             </div>
+          </div>
           </div>
 
           <p className="text-center text-white/50 text-sm font-medium">
