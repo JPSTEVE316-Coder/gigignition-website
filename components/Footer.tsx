@@ -5,9 +5,23 @@ import Link from 'next/link'
 import { Twitter, Instagram, Youtube } from 'lucide-react'
 
 const footerLinks = {
-  Product: ['How It Works', 'AI Hustles', 'Pricing', 'Download'],
-  Resources: ['Success Stories', 'Hustle Blog', 'Help Center', 'Community'],
-  Company: ['About', 'Careers', 'Press', 'Contact'],
+  Product: [
+    { label: 'How It Works', href: '/#how' },
+    { label: 'AI Hustles', href: '/#hustles' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Download', href: '/#features' },
+  ],
+  Resources: [
+    { label: 'Hustle Blog', href: '/blog' },
+    { label: 'Help Center', href: '/help' },
+    { label: 'Community', href: '#' },
+  ],
+  Company: [
+    { label: 'About', href: '#' },
+    { label: 'Careers', href: '#' },
+    { label: 'Press', href: '#' },
+    { label: 'Contact', href: '#' },
+  ],
 }
 
 export default function Footer() {
@@ -33,9 +47,9 @@ export default function Footer() {
               <h4 className="font-orbitron font-semibold text-xs uppercase tracking-wider mb-5 text-white/80">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="text-white/40 text-sm hover:text-white transition-colors font-medium">
-                      {link}
+                  <li key={link.label}>
+                    <Link href={link.href} className="text-white/40 text-sm hover:text-white transition-colors font-medium">
+                      {link.label}
                     </Link>
                   </li>
                 ))}
