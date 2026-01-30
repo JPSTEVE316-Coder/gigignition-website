@@ -44,23 +44,23 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="min-h-screen flex items-center py-20 lg:py-0 px-6 lg:px-12 relative z-10">
+    <section id="features" className="py-16 lg:py-20 px-6 lg:px-12 relative z-10">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-4 font-orbitron">
+        <div className="text-center mb-10">
+          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-3 font-orbitron">
             App Features
           </p>
-          <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">
             Built for <span className="text-neon-green">Gen Z</span> hustlers
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
+          <p className="text-base text-white/60 max-w-2xl mx-auto font-medium">
             Mobile-first. Familiar UX patterns. No long-form content walls. Just swipe, learn, earn, repeat.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -68,15 +68,15 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-bg-card border border-white/[0.08] rounded-3xl p-6 hover:border-white/[0.15] hover:-translate-y-1 transition-all"
+              className="bg-bg-card border border-white/[0.08] rounded-2xl p-5 hover:border-white/[0.15] hover:-translate-y-1 transition-all"
             >
-              <div className={`w-12 h-12 rounded-2xl bg-${feature.color}/10 border border-${feature.color}/30 flex items-center justify-center mb-5`}>
-                <feature.icon className={`w-5 h-5 text-${feature.color}`} strokeWidth={1.5} />
+              <div className={`w-10 h-10 rounded-xl bg-${feature.color}/10 border border-${feature.color}/30 flex items-center justify-center mb-4`}>
+                <feature.icon className={`w-4 h-4 text-${feature.color}`} strokeWidth={1.5} />
               </div>
-              <h3 className="font-orbitron text-lg font-bold mb-2 tracking-tight">
+              <h3 className="font-orbitron text-base font-bold mb-1.5 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/50 text-xs leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

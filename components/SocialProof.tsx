@@ -20,19 +20,19 @@ const stats = [
 
 export default function SocialProof() {
   return (
-    <section className="py-20 lg:py-24 relative z-10 overflow-hidden">
+    <section className="py-12 lg:py-16 relative z-10 overflow-hidden">
       {/* Ticker */}
-      <div className="ticker-mask mb-14">
+      <div className="ticker-mask mb-10">
         <div className="flex animate-ticker">
           {[...tickerItems, ...tickerItems].map((item, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center gap-3 bg-bg-card border border-white/[0.08] px-5 py-3 rounded-full mr-4 whitespace-nowrap"
+              className="flex-shrink-0 flex items-center gap-2.5 bg-bg-card border border-white/[0.08] px-4 py-2.5 rounded-full mr-3 whitespace-nowrap"
             >
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-blue to-[#1E5FAA] flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-blue to-[#1E5FAA] flex items-center justify-center font-bold text-xs">
                 {item.initials}
               </div>
-              <span className="text-sm text-white/60 font-medium">
+              <span className="text-xs text-white/60 font-medium">
                 {item.text} <span className="text-neon-green font-bold">{item.amount}</span> {item.context}
               </span>
             </div>
@@ -42,7 +42,7 @@ export default function SocialProof() {
 
       {/* Stats Grid */}
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -50,13 +50,13 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-bg-card border border-white/[0.08] rounded-2xl p-6 text-center hover:border-white/[0.15] hover:-translate-y-1 transition-all"
+              className="bg-bg-card border border-white/[0.08] rounded-xl p-4 text-center hover:border-white/[0.15] hover:-translate-y-1 transition-all"
             >
-              <div className="font-orbitron text-3xl lg:text-4xl font-extrabold tracking-tight mb-2">
+              <div className="font-orbitron text-2xl lg:text-3xl font-extrabold tracking-tight mb-1">
                 <span className={`text-${stat.color}`}>{stat.value}</span>
                 <span className={`text-${stat.color}`}>{stat.suffix}</span>
               </div>
-              <div className="text-xs text-white/40 font-semibold uppercase tracking-wider">{stat.label}</div>
+              <div className="text-[10px] text-white/40 font-semibold uppercase tracking-wider">{stat.label}</div>
             </motion.div>
           ))}
         </div>

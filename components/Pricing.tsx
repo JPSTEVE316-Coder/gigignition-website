@@ -78,17 +78,17 @@ export default function Pricing() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   return (
-    <section id="pricing" className="py-20 lg:py-28 px-6 lg:px-12 relative z-10">
+    <section id="pricing" className="py-16 lg:py-20 px-6 lg:px-12 relative z-10">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-4 font-orbitron">
+        <div className="text-center mb-10">
+          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-3 font-orbitron">
             Pricing
           </p>
-          <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">
             No subscriptions. <span className="text-neon-green">No tricks.</span>
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
+          <p className="text-base text-white/60 max-w-2xl mx-auto font-medium">
             Your side hustle should not cost a side hustle. Pay only when you ignite - core features free forever.
           </p>
         </div>
@@ -99,29 +99,29 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-r from-brand-blue/20 via-neon-green/10 to-brand-gold/20 border border-brand-blue/30 rounded-2xl p-6 mb-12 text-center relative overflow-hidden"
+          className="bg-gradient-to-r from-brand-blue/20 via-neon-green/10 to-brand-gold/20 border border-brand-blue/30 rounded-2xl p-5 mb-10 text-center relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,255,136,0.1)_0%,transparent_70%)]" />
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 bg-neon-green/20 border border-neon-green/40 px-4 py-2 rounded-full text-neon-green font-bold text-sm mb-3">
-              <Zap className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 bg-neon-green/20 border border-neon-green/40 px-3 py-1.5 rounded-full text-neon-green font-bold text-xs mb-2">
+              <Zap className="w-3.5 h-3.5" />
               FREE TO START
             </div>
-            <h3 className="font-orbitron text-2xl lg:text-3xl font-bold mb-2">
+            <h3 className="font-orbitron text-xl lg:text-2xl font-bold mb-1.5">
               Get <span className="text-neon-green">50 Free Fuel</span> at Sign-Up
             </h3>
-            <p className="text-white/60 font-medium">
+            <p className="text-white/60 font-medium text-sm">
               Enough to IGNITE 2 hustle cards + 1 reshuffle. Experience the full value before you buy.
             </p>
           </div>
         </motion.div>
 
         {/* How Fuel Works */}
-        <div className="mb-14">
-          <h3 className="font-orbitron font-bold text-xl text-center mb-6">
+        <div className="mb-10">
+          <h3 className="font-orbitron font-bold text-lg text-center mb-5">
             How Fuel Works
           </h3>
-          <div className="grid md:grid-cols-2 gap-3">
+          <div className="grid md:grid-cols-2 gap-2.5">
             {fuelActions.map((item, index) => (
               <motion.div
                 key={item.action}
@@ -129,17 +129,17 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className={`flex items-center justify-between gap-4 p-4 rounded-xl border ${
+                className={`flex items-center justify-between gap-3 p-3 rounded-xl border ${
                   item.paid 
                     ? 'bg-bg-card border-white/[0.08]' 
                     : 'bg-neon-green/5 border-neon-green/20'
                 }`}
               >
                 <div className="flex-1">
-                  <p className="font-semibold text-white text-sm">{item.action}</p>
-                  <p className="text-xs text-white/40">{item.note}</p>
+                  <p className="font-semibold text-white text-xs">{item.action}</p>
+                  <p className="text-[10px] text-white/40">{item.note}</p>
                 </div>
-                <span className={`font-orbitron font-bold text-sm whitespace-nowrap ${
+                <span className={`font-orbitron font-bold text-xs whitespace-nowrap ${
                   item.paid ? 'text-brand-gold' : 'text-neon-green'
                 }`}>
                   {item.cost}
@@ -147,17 +147,17 @@ export default function Pricing() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-neon-cyan text-sm font-semibold mt-4">
+          <p className="text-center text-neon-cyan text-xs font-semibold mt-3">
             Coaching is UNLIMITED once you ignite a card - no per-question fees!
           </p>
         </div>
 
         {/* Fuel Packages */}
-        <div className="mb-14">
-          <h3 className="font-orbitron font-bold text-xl text-center mb-6">
+        <div className="mb-10">
+          <h3 className="font-orbitron font-bold text-lg text-center mb-5">
             Fuel Packages
           </h3>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3">
             {fuelPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -165,16 +165,16 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-bg-card border rounded-2xl p-6 transition-all hover:-translate-y-1 ${
+                className={`relative bg-bg-card border rounded-2xl p-5 transition-all hover:-translate-y-1 ${
                   pkg.badge === 'BEST VALUE'
-                    ? 'border-neon-green/50 shadow-[0_0_30px_rgba(0,255,136,0.15)]' 
+                    ? 'border-neon-green/50 shadow-[0_0_25px_rgba(0,255,136,0.15)]' 
                     : pkg.badge === 'POPULAR'
-                    ? 'border-neon-orange/50 shadow-[0_0_30px_rgba(255,107,53,0.15)]'
+                    ? 'border-neon-orange/50 shadow-[0_0_25px_rgba(255,107,53,0.15)]'
                     : 'border-white/[0.08] hover:border-white/[0.15]'
                 }`}
               >
                 {pkg.badge && (
-                  <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-xs font-bold font-orbitron ${
+                  <div className={`absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-orbitron ${
                     pkg.badge === 'BEST VALUE' 
                       ? 'bg-neon-green text-midnight' 
                       : 'bg-neon-orange text-midnight'
@@ -183,16 +183,16 @@ export default function Pricing() {
                   </div>
                 )}
                 
-                <div className="text-center mb-5">
-                  <Rocket className={`w-8 h-8 mx-auto mb-3 text-${pkg.color}`} />
-                  <h4 className="font-orbitron font-bold text-lg mb-1">{pkg.name}</h4>
-                  <div className="font-orbitron text-4xl font-extrabold text-white mb-1">
+                <div className="text-center mb-4">
+                  <Rocket className={`w-7 h-7 mx-auto mb-2 text-${pkg.color}`} />
+                  <h4 className="font-orbitron font-bold text-base mb-0.5">{pkg.name}</h4>
+                  <div className="font-orbitron text-3xl font-extrabold text-white mb-0.5">
                     {pkg.fuel}
                   </div>
-                  <p className="text-xs text-white/40">Fuel Units</p>
+                  <p className="text-[10px] text-white/40">Fuel Units</p>
                 </div>
 
-                <div className="space-y-2 mb-5 text-sm">
+                <div className="space-y-1.5 mb-4 text-xs">
                   <div className="flex justify-between text-white/60">
                     <span>Hustle Cards</span>
                     <span className="font-semibold text-white">{pkg.cards}</span>
@@ -208,10 +208,10 @@ export default function Pricing() {
                 </div>
 
                 <div className="text-center">
-                  <div className={`font-orbitron text-2xl font-bold text-${pkg.color} mb-2`}>
+                  <div className={`font-orbitron text-xl font-bold text-${pkg.color} mb-2`}>
                     ${pkg.price}
                   </div>
-                  <button className={`w-full py-3 rounded-xl font-orbitron font-semibold text-sm transition-all ${
+                  <button className={`w-full py-2.5 rounded-xl font-orbitron font-semibold text-xs transition-all ${
                     pkg.badge === 'BEST VALUE'
                       ? 'bg-neon-green text-midnight hover:bg-neon-green/90'
                       : pkg.badge === 'POPULAR'
@@ -224,7 +224,7 @@ export default function Pricing() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-white/40 text-sm mt-4">
+          <p className="text-center text-white/40 text-xs mt-3">
             One-time purchase - No subscription - Fuel never expires
           </p>
         </div>
@@ -235,24 +235,24 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-bg-card border border-white/[0.08] rounded-2xl p-5 lg:p-8 mb-10"
+          className="bg-bg-card border border-white/[0.08] rounded-2xl p-5 lg:p-6 mb-8"
         >
-          <h3 className="font-orbitron font-bold text-xl text-center mb-6">
+          <h3 className="font-orbitron font-bold text-lg text-center mb-5">
             Why PAYG <span className="text-neon-green">Wins</span>
           </h3>
           
           {/* Mobile-friendly comparison cards */}
-          <div className="space-y-3 mb-8">
+          <div className="space-y-2.5 mb-6">
             {comparison.map((row, i) => (
-              <div key={i} className="bg-midnight/50 rounded-xl p-4 border border-white/[0.05]">
-                <p className="text-white/80 font-semibold text-sm mb-3">{row.feature}</p>
-                <div className="grid grid-cols-2 gap-3">
+              <div key={i} className="bg-midnight/50 rounded-xl p-3 border border-white/[0.05]">
+                <p className="text-white/80 font-semibold text-xs mb-2">{row.feature}</p>
+                <div className="grid grid-cols-2 gap-2">
                   <div className="text-center p-2 rounded-lg bg-neon-orange/10 border border-neon-orange/20">
-                    <p className="text-[10px] text-neon-orange/60 uppercase tracking-wider mb-1">Them</p>
+                    <p className="text-[9px] text-neon-orange/60 uppercase tracking-wider mb-0.5">Them</p>
                     <span className={`text-xs font-semibold ${row.them === 'Yep' ? 'text-neon-orange' : 'text-neon-orange'}`}>{row.them}</span>
                   </div>
                   <div className="text-center p-2 rounded-lg bg-neon-green/10 border border-neon-green/20">
-                    <p className="text-[10px] text-neon-green/60 uppercase tracking-wider mb-1">Us</p>
+                    <p className="text-[9px] text-neon-green/60 uppercase tracking-wider mb-0.5">Us</p>
                     <span className={`text-xs font-semibold ${row.us === 'Nope' ? 'text-neon-green' : 'text-neon-green'}`}>{row.us}</span>
                   </div>
                 </div>
@@ -261,38 +261,38 @@ export default function Pricing() {
           </div>
 
           {/* Annual Savings */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-5">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-4">Casual User (2 cards/mo)</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
+              <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-3">Casual User (2 cards/mo)</p>
               <div className="flex items-center justify-between gap-2">
                 <div>
-                  <p className="text-neon-orange font-orbitron text-xl lg:text-2xl font-bold line-through decoration-2">$179.88/yr</p>
-                  <p className="text-xs text-white/40 mt-1">Subscription apps</p>
+                  <p className="text-neon-orange font-orbitron text-lg lg:text-xl font-bold line-through decoration-2">$179.88/yr</p>
+                  <p className="text-[10px] text-white/40 mt-0.5">Subscription apps</p>
                 </div>
-                <div className="text-3xl text-white/20">&rarr;</div>
+                <div className="text-2xl text-white/20">&rarr;</div>
                 <div className="text-right">
-                  <p className="font-orbitron text-2xl lg:text-3xl font-bold text-neon-green">~$12/yr</p>
-                  <p className="text-xs text-white/40 mt-1">Gig Ignition</p>
+                  <p className="font-orbitron text-xl lg:text-2xl font-bold text-neon-green">~$12/yr</p>
+                  <p className="text-[10px] text-white/40 mt-0.5">Gig Ignition</p>
                 </div>
               </div>
             </div>
-            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-5">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-4">Active User (4 cards/mo)</p>
+            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
+              <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-3">Active User (4 cards/mo)</p>
               <div className="flex items-center justify-between gap-2">
                 <div>
-                  <p className="text-neon-orange font-orbitron text-xl lg:text-2xl font-bold line-through decoration-2">$179.88/yr</p>
-                  <p className="text-xs text-white/40 mt-1">Subscription apps</p>
+                  <p className="text-neon-orange font-orbitron text-lg lg:text-xl font-bold line-through decoration-2">$179.88/yr</p>
+                  <p className="text-[10px] text-white/40 mt-0.5">Subscription apps</p>
                 </div>
-                <div className="text-3xl text-white/20">&rarr;</div>
+                <div className="text-2xl text-white/20">&rarr;</div>
                 <div className="text-right">
-                  <p className="font-orbitron text-2xl lg:text-3xl font-bold text-neon-green">~$30/yr</p>
-                  <p className="text-xs text-white/40 mt-1">Gig Ignition</p>
+                  <p className="font-orbitron text-xl lg:text-2xl font-bold text-neon-green">~$30/yr</p>
+                  <p className="text-[10px] text-white/40 mt-0.5">Gig Ignition</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <p className="text-center text-white/50 text-sm font-medium">
+          <p className="text-center text-white/50 text-xs font-medium">
             Even power users save <span className="text-neon-green font-bold">80%+</span> vs subscriptions. You keep the difference.
           </p>
         </motion.div>
@@ -303,24 +303,24 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-neon-purple/10 border border-neon-purple/30 rounded-2xl p-5 mb-10 flex gap-4 items-start"
+          className="bg-neon-purple/10 border border-neon-purple/30 rounded-2xl p-4 mb-8 flex gap-3 items-start"
         >
-          <Shield className="w-8 h-8 text-neon-purple flex-shrink-0 mt-1" />
+          <Shield className="w-6 h-6 text-neon-purple flex-shrink-0 mt-0.5" />
           <div>
-            <h4 className="font-orbitron font-bold text-neon-purple mb-1">Loss Shield Protection</h4>
-            <p className="text-white/60 text-sm">
+            <h4 className="font-orbitron font-bold text-neon-purple text-sm mb-1">Loss Shield Protection</h4>
+            <p className="text-white/60 text-xs">
               If you mark a hustle as Failed after working on it for 7+ days, we automatically refund 
-              <span className="text-neon-purple font-semibold"> 50% of the Fuel</span> you spent on that card. We invest in your learning.
+              <span className="text-neon-purple font-semibold"> 50% of the Fuel</span> you spent on that card.
             </p>
           </div>
         </motion.div>
 
         {/* FAQ */}
-        <div className="mb-10">
-          <h3 className="font-orbitron font-bold text-xl text-center mb-6">
+        <div className="mb-8">
+          <h3 className="font-orbitron font-bold text-lg text-center mb-4">
             Questions?
           </h3>
-          <div className="space-y-3 max-w-2xl mx-auto">
+          <div className="space-y-2 max-w-2xl mx-auto">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -332,14 +332,14 @@ export default function Pricing() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full flex items-center justify-between p-4 text-left"
+                  className="w-full flex items-center justify-between p-3 text-left"
                 >
-                  <span className="font-semibold text-white text-sm">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-white/40 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <span className="font-semibold text-white text-xs">{faq.q}</span>
+                  <ChevronDown className={`w-4 h-4 text-white/40 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
-                  <div className="px-4 pb-4">
-                    <p className="text-white/60 text-sm leading-relaxed">{faq.a}</p>
+                  <div className="px-3 pb-3">
+                    <p className="text-white/60 text-xs leading-relaxed">{faq.a}</p>
                   </div>
                 )}
               </motion.div>
@@ -349,10 +349,10 @@ export default function Pricing() {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <p className="text-white/40 text-sm font-medium mb-4">
+          <p className="text-white/40 text-xs font-medium mb-3">
             50 free Fuel. No credit card. Zero commitment.
           </p>
-          <button className="group inline-flex items-center justify-center gap-3 bg-gradient-to-br from-brand-blue to-[#1E5FAA] text-white px-8 py-4 rounded-full font-orbitron font-semibold text-base shadow-[0_0_40px_rgba(43,124,212,0.4)] hover:shadow-[0_10px_50px_rgba(43,124,212,0.5)] hover:-translate-y-1 transition-all">
+          <button className="group inline-flex items-center justify-center gap-2 bg-gradient-to-br from-brand-blue to-[#1E5FAA] text-white px-6 py-3 rounded-full font-orbitron font-semibold text-sm shadow-[0_0_30px_rgba(43,124,212,0.4)] hover:shadow-[0_10px_40px_rgba(43,124,212,0.5)] hover:-translate-y-1 transition-all">
             Download Free - Get 50 Fuel Instantly
           </button>
         </div>

@@ -44,23 +44,23 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="min-h-screen flex items-center py-20 lg:py-0 px-6 lg:px-12 relative z-10">
+    <section id="how" className="py-16 lg:py-20 px-6 lg:px-12 relative z-10">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-4 font-orbitron">
+        <div className="text-center mb-10 lg:mb-12">
+          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-3 font-orbitron">
             How It Works
           </p>
-          <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">
             From <span className="text-brand-gold">"I wish"</span> to <span className="text-neon-green">"I did"</span>
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
+          <p className="text-base text-white/60 max-w-2xl mx-auto font-medium">
             No more analysis paralysis. Gig Ignition takes you from zero to earning with AI-powered guidance every step of the way.
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -68,7 +68,7 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative bg-bg-card border border-white/[0.08] rounded-3xl p-6 overflow-hidden hover:-translate-y-2 hover:border-white/[0.15] transition-all duration-400"
+              className="group relative bg-bg-card border border-white/[0.08] rounded-2xl p-5 overflow-hidden hover:-translate-y-1 hover:border-white/[0.15] transition-all duration-400"
               style={{ boxShadow: `0 0 0 rgba(0,0,0,0)` }}
               onMouseEnter={(e) => e.currentTarget.style.boxShadow = `0 20px 50px ${step.glow}`}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = `0 0 0 rgba(0,0,0,0)`}
@@ -77,23 +77,23 @@ export default function HowItWorks() {
               <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-${step.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
               
               {/* Icon */}
-              <div className={`flex items-center justify-center w-14 h-14 bg-${step.color}/10 border border-${step.color}/30 rounded-2xl mb-5`}>
-                <step.icon className={`w-6 h-6 text-${step.color}`} strokeWidth={1.5} />
+              <div className={`flex items-center justify-center w-11 h-11 bg-${step.color}/10 border border-${step.color}/30 rounded-xl mb-4`}>
+                <step.icon className={`w-5 h-5 text-${step.color}`} strokeWidth={1.5} />
               </div>
 
               {/* Number */}
-              <div className="font-orbitron text-xs font-bold text-white/30 mb-2 tracking-wider">
+              <div className="font-orbitron text-[10px] font-bold text-white/30 mb-1.5 tracking-wider">
                 STEP {step.number}
               </div>
 
               {/* Content */}
-              <h3 className="font-orbitron text-xl font-bold mb-1 tracking-tight">
+              <h3 className="font-orbitron text-lg font-bold mb-1 tracking-tight">
                 {step.title}
               </h3>
-              <p className={`text-sm font-semibold text-${step.color} mb-3`}>
+              <p className={`text-xs font-semibold text-${step.color} mb-2`}>
                 {step.subtitle}
               </p>
-              <p className="text-white/50 leading-relaxed text-sm">
+              <p className="text-white/50 leading-relaxed text-xs">
                 {step.description}
               </p>
             </motion.div>
