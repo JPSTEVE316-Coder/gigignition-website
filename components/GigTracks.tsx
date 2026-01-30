@@ -1,96 +1,115 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Zap, Palette, Code, TrendingUp } from 'lucide-react'
 
-const tracks = [
+const categories = [
   {
-    emoji: '🏷️',
-    badge: 'High Demand',
-    badgeColor: 'gold',
-    title: 'The Reseller',
-    description: 'Flip thrift finds, garage items, or limited drops. Our AI spots underpriced inventory in your area.',
-    earning: '$200 – $2,000/mo',
+    icon: Zap,
+    label: 'Easy Start',
+    color: 'neon-green',
+    hustles: [
+      { name: 'ChatGPT Prompt Selling', earnings: '$300-2K/mo', time: '1-2 days' },
+      { name: 'AI Voice-Over Services', earnings: '$500-3K/mo', time: '2-3 days' },
+      { name: 'AI Resume Writing', earnings: '$2K-6K/mo', time: '2-3 days' },
+    ]
   },
   {
-    emoji: '🎨',
-    badge: 'Fast Growth',
-    badgeColor: 'blue',
-    title: 'The Creator',
-    description: 'Design, edit, write, create. Get matched with brands and clients who pay for your skills.',
-    earning: '$500 – $5,000/mo',
+    icon: Palette,
+    label: 'Creative + AI',
+    color: 'neon-purple',
+    hustles: [
+      { name: 'AI Video Editing', earnings: '$2K-8K/mo', time: '1 week' },
+      { name: 'Faceless YouTube', earnings: '$1K-20K/mo', time: '1-2 weeks' },
+      { name: 'AI Product Photos', earnings: '$2K-6K/mo', time: '1 week' },
+    ]
   },
   {
-    emoji: '⚡',
-    badge: 'Quick Start',
-    badgeColor: 'green',
-    title: 'The Tasker',
-    description: 'Deliveries, errands, moving help. Turn your time and wheels into immediate cash flow.',
-    earning: '$100 – $1,500/mo',
+    icon: Code,
+    label: 'Tech + AI',
+    color: 'neon-cyan',
+    hustles: [
+      { name: 'AI Chatbot Builder', earnings: '$2K-10K/mo', time: '1-2 weeks' },
+      { name: 'AI Automation Consultant', earnings: '$5K-15K/mo', time: '2-3 weeks' },
+      { name: 'AI SEO Content Writer', earnings: '$3K-10K/mo', time: '1 week' },
+    ]
+  },
+  {
+    icon: TrendingUp,
+    label: 'Scalable',
+    color: 'brand-gold',
+    hustles: [
+      { name: 'AI Social Media Manager', earnings: '$2K-8K/mo', time: '1 week' },
+      { name: 'AI-Curated Newsletter', earnings: '$500-5K/mo', time: '1 week' },
+      { name: 'AI Course Creation', earnings: '$1K-10K/mo', time: '2-3 weeks' },
+    ]
   },
 ]
 
-const badgeColors = {
-  gold: 'bg-[#F5A623]/15 border-[#F5A623]/30 text-[#F5A623]',
-  blue: 'bg-[#0099FF]/15 border-[#0099FF]/30 text-[#0099FF]',
-  green: 'bg-green-500/15 border-green-500/30 text-green-500',
-}
-
 export default function GigTracks() {
   return (
-    <section id="tracks" className="min-h-screen flex items-center py-20 lg:py-0 px-6 lg:px-12 relative z-10 bg-gradient-to-b from-transparent via-[#0D1117]/50 to-transparent">
+    <section id="hustles" className="min-h-screen flex items-center py-20 lg:py-0 px-6 lg:px-12 relative z-10">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-[#0099FF] uppercase tracking-[0.15em] mb-4">
-            Gig Tracks
+        <div className="text-center mb-14">
+          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-4 font-orbitron">
+            20+ AI Hustles
           </p>
-          <h2 className="font-syne text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-            Find your lane
+          <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+            Income streams that <span className="gradient-text">didn't exist</span> 2 years ago
           </h2>
-          <p className="text-lg text-white/60 max-w-xl mx-auto">
-            Different skills, different paths. All leading to real income.
+          <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
+            Leverage ChatGPT, Midjourney, ElevenLabs, and more. These AI-powered hustles let you earn 10x faster than traditional gigs.
           </p>
         </div>
 
-        {/* Tracks Grid */}
-        <div className="grid md:grid-cols-3 gap-5">
-          {tracks.map((track, index) => (
+        {/* Categories Grid */}
+        <div className="grid md:grid-cols-2 gap-5">
+          {categories.map((category, catIndex) => (
             <motion.div
-              key={track.title}
+              key={category.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative rounded-3xl overflow-hidden bg-[#06080C] border border-white/[0.08] cursor-pointer hover:-translate-y-3 hover:scale-[1.02] hover:border-white/[0.15] transition-all duration-500"
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, delay: catIndex * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-bg-card border border-white/[0.08] rounded-3xl p-6 hover:border-white/[0.15] transition-all"
             >
-              {/* Visual */}
-              <div className="h-44 bg-[#161B22] flex items-center justify-center text-6xl">
-                {track.emoji}
+              {/* Category Header */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-10 h-10 rounded-xl bg-${category.color}/10 border border-${category.color}/30 flex items-center justify-center`}>
+                  <category.icon className={`w-5 h-5 text-${category.color}`} strokeWidth={1.5} />
+                </div>
+                <span className={`font-orbitron font-bold text-${category.color} text-sm tracking-wide`}>
+                  {category.label}
+                </span>
               </div>
 
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-
-              {/* Content */}
-              <div className="relative z-10 p-6">
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border mb-4 ${badgeColors[track.badgeColor as keyof typeof badgeColors]}`}>
-                  {track.badge}
-                </span>
-                <h3 className="font-syne text-2xl font-bold mb-2 tracking-tight">
-                  {track.title}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-5">
-                  {track.description}
-                </p>
-                <div className="flex items-center gap-2 font-syne font-bold text-lg text-[#F5A623]">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="12" r="10"/>
-                  </svg>
-                  {track.earning}
-                </div>
+              {/* Hustles List */}
+              <div className="space-y-3">
+                {category.hustles.map((hustle, index) => (
+                  <div
+                    key={hustle.name}
+                    className="flex items-center justify-between p-4 bg-midnight/50 rounded-2xl border border-white/[0.05] hover:border-white/[0.1] transition-colors"
+                  >
+                    <div>
+                      <h4 className="font-semibold text-white text-sm mb-0.5">{hustle.name}</h4>
+                      <p className="text-xs text-white/40">Launch in {hustle.time}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-orbitron font-bold text-neon-green text-sm">{hustle.earnings}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-10">
+          <p className="text-white/40 text-sm font-medium">
+            + 12 more hustles in the app including AI Dating Profiles, AI Music Production, AI Translation & more
+          </p>
         </div>
       </div>
     </section>

@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Twitter, Instagram, Youtube } from 'lucide-react'
 
 const footerLinks = {
-  Product: ['How It Works', 'Gig Tracks', 'Pricing', 'Download'],
-  Resources: ['The Playbook', 'Success Stories', 'Help Center', 'Community'],
+  Product: ['How It Works', 'AI Hustles', 'Pricing', 'Download'],
+  Resources: ['Success Stories', 'Hustle Blog', 'Help Center', 'Community'],
   Company: ['About', 'Careers', 'Press', 'Contact'],
 }
 
@@ -18,20 +18,23 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Image src="/logo.png" alt="Gig Ignition" width={48} height={48} className="h-12 w-auto mb-4" />
-            <p className="text-white/40 text-sm leading-relaxed max-w-[280px]">
-              AI-powered gig matching for the modern hustler. Stop scrolling. Start earning.
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/logo.png" alt="Gig Ignition" width={40} height={40} className="h-10 w-auto" />
+              <span className="font-orbitron font-bold text-lg">Gig Ignition</span>
+            </div>
+            <p className="text-white/40 text-sm leading-relaxed max-w-[280px] font-medium">
+              AI-Powered Side Hustles. Swipe to discover, learn to launch, start earning this week.
             </p>
           </div>
 
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-semibold text-sm mb-5 text-white">{category}</h4>
+              <h4 className="font-orbitron font-semibold text-xs uppercase tracking-wider mb-5 text-white/80">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <Link href="#" className="text-white/40 text-sm hover:text-white transition-colors">
+                    <Link href="#" className="text-white/40 text-sm hover:text-white transition-colors font-medium">
                       {link}
                     </Link>
                   </li>
@@ -43,15 +46,15 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/[0.08] gap-4">
-          <p className="text-white/40 text-sm">
-            © 2026 <span className="text-[#F5A623] font-semibold">Gig Ignition</span>. Fuel your future.
+          <p className="text-white/30 text-sm font-medium">
+            © 2026 <span className="text-brand-gold font-semibold">Gig Ignition</span>. All rights reserved.
           </p>
           <div className="flex gap-3">
-            {[Twitter, Instagram, Linkedin].map((Icon, i) => (
+            {[Twitter, Instagram, Youtube].map((Icon, i) => (
               <Link
                 key={i}
                 href="#"
-                className="w-10 h-10 flex items-center justify-center bg-[#161B22] border border-white/[0.08] rounded-xl text-white/60 hover:text-white hover:border-white/[0.15] transition-all"
+                className="w-10 h-10 flex items-center justify-center bg-bg-elevated border border-white/[0.08] rounded-xl text-white/50 hover:text-white hover:border-white/[0.15] transition-all"
               >
                 <Icon className="w-[18px] h-[18px]" />
               </Link>

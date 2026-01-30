@@ -1,28 +1,44 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, CreditCard, CheckCircle, Cpu } from 'lucide-react'
+import { Layers, MessageCircle, Trophy, Flame, Share2, Shield } from 'lucide-react'
 
 const features = [
   {
-    icon: Zap,
-    title: 'Instant Matching',
-    description: 'No waiting. No applications. Our AI matches you in under 3 minutes based on your real skills and availability.',
+    icon: Layers,
+    title: 'Swipe to Discover',
+    description: 'Tinder-style interface. Swipe right to ignite a hustle, left to pass. No overwhelming lists—just quick, curated decisions.',
+    color: 'brand-blue',
   },
   {
-    icon: CreditCard,
-    title: 'Fast Payouts',
-    description: 'Get paid within 24 hours of completing gigs. Direct to your bank or card. No invoicing headaches.',
+    icon: MessageCircle,
+    title: 'AI Hustle Coach',
+    description: 'Stuck on step 3? Ask your AI coach. Get instant answers, tool links, and workarounds. It knows your progress.',
+    color: 'neon-cyan',
   },
   {
-    icon: CheckCircle,
-    title: 'Vetted Opportunities',
-    description: 'Every gig is verified. No scams. No lowballers. We filter so you can focus on earning.',
+    icon: Trophy,
+    title: 'Missions & Progress',
+    description: 'Every hustle breaks into bite-sized steps. Tap to complete, track your progress bar, get that dopamine hit.',
+    color: 'brand-gold',
   },
   {
-    icon: Cpu,
-    title: 'AI Coaching',
-    description: 'Stuck? Get step-by-step guidance on executing gigs, pricing your work, and scaling your income.',
+    icon: Flame,
+    title: 'Streaks & Achievements',
+    description: 'Daily streaks, 8 unlockable badges, gamified milestones. First Dollar, Week Warrior, Hustle King—collect them all.',
+    color: 'neon-orange',
+  },
+  {
+    icon: Share2,
+    title: 'Viral Win Cards',
+    description: 'Hit a milestone? Auto-generate shareable cards for TikTok & Stories. "Clone My Success" links drive organic growth.',
+    color: 'neon-purple',
+  },
+  {
+    icon: Shield,
+    title: 'Loss Shield',
+    description: 'Hustle didn\'t work out? Get 50% of your Fuel credits back if marked "Failed" after 7 days. We\'re invested in your success.',
+    color: 'neon-green',
   },
 ]
 
@@ -31,40 +47,38 @@ export default function Features() {
     <section id="features" className="min-h-screen flex items-center py-20 lg:py-0 px-6 lg:px-12 relative z-10">
       <div className="max-w-6xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-[#0099FF] uppercase tracking-[0.15em] mb-4">
-            Built Different
+        <div className="text-center mb-14">
+          <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-4 font-orbitron">
+            App Features
           </p>
-          <h2 className="font-syne text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-            Why hustlers choose us
+          <h2 className="font-orbitron text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+            Built for <span className="text-neon-green">Gen Z</span> hustlers
           </h2>
-          <p className="text-lg text-white/60 max-w-xl mx-auto">
-            We built what we wished existed when we were grinding.
+          <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
+            Mobile-first. Familiar UX patterns. No long-form content walls. Just swipe, learn, earn, repeat.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex gap-5 bg-[#0D1117] border border-white/[0.08] rounded-3xl p-6 lg:p-8 hover:border-white/[0.15] hover:-translate-y-1 transition-all"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="bg-bg-card border border-white/[0.08] rounded-3xl p-6 hover:border-white/[0.15] hover:-translate-y-1 transition-all"
             >
-              <div className="flex-shrink-0 w-14 h-14 bg-[#161B22] border border-white/[0.08] rounded-2xl flex items-center justify-center">
-                <feature.icon className="w-6 h-6 text-[#0099FF]" strokeWidth={1.5} />
+              <div className={`w-12 h-12 rounded-2xl bg-${feature.color}/10 border border-${feature.color}/30 flex items-center justify-center mb-5`}>
+                <feature.icon className={`w-5 h-5 text-${feature.color}`} strokeWidth={1.5} />
               </div>
-              <div>
-                <h3 className="font-syne text-xl font-bold mb-2 tracking-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-white/60 text-[15px] leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              <h3 className="font-orbitron text-lg font-bold mb-2 tracking-tight">
+                {feature.title}
+              </h3>
+              <p className="text-white/50 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

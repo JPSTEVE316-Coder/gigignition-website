@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Gig Ignition | Your Side Hustle, Engineered',
-  description: 'AI-powered gig matching that actually works. Get matched to opportunities that fit your skills, schedule, and income goals. No gatekeeping. Just results.',
+  title: 'Gig Ignition | AI-Powered Side Hustles',
+  description: 'Swipe your way to your first side hustle. AI-powered income opportunities matched to your skills. Stop scrolling. Start earning.',
   openGraph: {
-    title: 'Gig Ignition: Your Side Hustle, Engineered',
-    description: 'AI-powered gig matching. Real money. Zero gatekeeping. Join 50,000+ hustlers already earning.',
+    title: 'Gig Ignition | AI-Powered Side Hustles',
+    description: 'Discover AI-powered income streams. Get step-by-step guidance. Launch your side hustle this week.',
     images: ['/logo.png'],
   },
 }
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="font-rajdhani">
         <div className="grain" />
         <div className="mesh-bg" />
         {children}

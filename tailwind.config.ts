@@ -9,15 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'bg-dark': '#06080C',
-        'bg-card': '#0D1117',
-        'bg-elevated': '#161B22',
-        'accent-blue': '#0099FF',
-        'accent-gold': '#F5A623',
+        'midnight': '#0A0E1A',
+        'bg-card': '#111827',
+        'bg-elevated': '#1F2937',
+        'brand-blue': '#2B7CD4',
+        'brand-gold': '#D4A03B',
+        'neon-green': '#00FF88',
+        'neon-orange': '#FF6B35',
+        'neon-cyan': '#00D4FF',
+        'neon-purple': '#B24BF3',
       },
       fontFamily: {
-        syne: ['Syne', 'sans-serif'],
-        outfit: ['Outfit', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
+        rajdhani: ['Rajdhani', 'sans-serif'],
       },
       animation: {
         'float': 'float 5s ease-in-out infinite',

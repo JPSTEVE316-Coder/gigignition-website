@@ -1,19 +1,34 @@
 # Gig Ignition
 
-**Your Side Hustle, Engineered** — AI-powered gig matching that actually works.
+**AI-Powered Side Hustles** — Swipe your way to your first side hustle.
 
 ![Gig Ignition](public/logo.png)
 
 ## Overview
 
-Gig Ignition is a premium landing page for an AI-powered side hustle platform targeting young adults (18-30). The design features a dark, sophisticated aesthetic with blue and gold accents.
+Gig Ignition is a mobile-first Side Hustle Accelerator for 18-30 year olds. This is the marketing website featuring a dark, premium aesthetic with the official brand colors.
+
+## Brand Colors
+
+- **Midnight**: #0A0E1A (Primary background)
+- **Brand Blue**: #2B7CD4 (Primary brand color)
+- **Brand Gold**: #D4A03B (Accent, rocket flame)
+- **Neon Green**: #00FF88 (Money, success)
+- **Neon Cyan**: #00D4FF (Information)
+- **Neon Orange**: #FF6B35 (Action, warnings)
+- **Neon Purple**: #B24BF3 (Premium features)
+
+## Typography
+
+- **Orbitron** — Bold, futuristic display font for headers
+- **Rajdhani** — Clean, modern font for body text
 
 ## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-- **Typography**: Syne (display) + Outfit (body)
+- **Icons**: Lucide React
 - **Deployment**: Vercel
 
 ## Getting Started
@@ -27,52 +42,44 @@ npm run dev
 
 # Build for production
 npm run build
-
-# Start production server
-npm start
 ```
 
 ## Deploy to Vercel
 
-1. Push this repository to GitHub
-2. Connect to [Vercel](https://vercel.com)
-3. Import the repository
-4. Deploy (zero configuration needed)
+1. Push to GitHub
+2. Import to [Vercel](https://vercel.com)
+3. Deploy (zero config)
 
 ## Project Structure
 
 ```
 gig-ignition/
 ├── app/
-│   ├── globals.css      # Global styles & Tailwind
-│   ├── layout.tsx       # Root layout with metadata
-│   └── page.tsx         # Main page component
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 ├── components/
-│   ├── Navbar.tsx       # Navigation bar
-│   ├── Hero.tsx         # Hero section
-│   ├── HowItWorks.tsx   # 3-step process
-│   ├── GigTracks.tsx    # Gig categories
-│   ├── SocialProof.tsx  # Ticker & stats
-│   ├── Features.tsx     # Feature grid
-│   ├── CTA.tsx          # Call-to-action
-│   └── Footer.tsx       # Footer
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── HowItWorks.tsx
+│   ├── GigTracks.tsx
+│   ├── SocialProof.tsx
+│   ├── Features.tsx
+│   ├── CTA.tsx
+│   └── Footer.tsx
 ├── public/
-│   └── logo.png         # Logo asset
-├── next.config.js
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
+│   └── logo.png
+└── ...config files
 ```
 
-## Features
+## Key Sections
 
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Sections fit within viewport on desktop/laptop
-- ✅ Smooth scroll animations
-- ✅ Interactive cursor glow effect
-- ✅ Animated logo with orbiting elements
-- ✅ Auto-scrolling social proof ticker
-- ✅ Dark premium aesthetic
+1. **Hero** — "Stop scrolling. Start earning." with floating logo
+2. **How It Works** — Discover → Learn → Launch → Celebrate
+3. **AI Hustles** — 20+ income streams with earnings & launch times
+4. **Social Proof** — Live ticker + stats
+5. **Features** — Swipe UI, AI Coach, Streaks, Win Cards, Loss Shield
+6. **CTA** — Download app prompt
 
 ## License
 
