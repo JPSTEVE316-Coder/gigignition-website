@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Play, Zap, Clock, TrendingUp, Sparkles } from 'lucide-react'
+import { Play, Zap, Clock, TrendingUp } from 'lucide-react'
 import { useState, useRef } from 'react'
 
 const highlights = [
@@ -100,7 +100,7 @@ export default function Demo() {
             </div>
 
             {/* Highlights */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3">
               {highlights.map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -119,15 +119,6 @@ export default function Demo() {
                   </div>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Social Proof Snippet */}
-            <div className="flex items-center gap-3 p-3 bg-neon-green/5 border border-neon-green/20 rounded-xl">
-              <Sparkles className="w-5 h-5 text-neon-green flex-shrink-0" />
-              <p className="text-xs text-white/70">
-                <span className="text-neon-green font-bold">10,000+ hustlers</span> discovered their path. 
-                Avg. time to first $: <span className="text-neon-green font-bold">12 days</span>.
-              </p>
             </div>
           </motion.div>
 
@@ -189,11 +180,11 @@ export default function Demo() {
                 <div className="absolute right-[-2px] top-[140px] w-[3px] h-[65px] bg-[#2a2a2a] rounded-r-md" />
               </div>
 
-              {/* Floating Elements */}
+              {/* Floating Elements - In front of phone */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-2 -right-2 bg-neon-green text-midnight px-2.5 py-1 rounded-full font-orbitron font-bold text-[10px] shadow-[0_0_15px_rgba(0,255,136,0.4)]"
+                className="absolute -top-2 -right-2 z-20 bg-neon-green text-midnight px-2.5 py-1 rounded-full font-orbitron font-bold text-[10px] shadow-[0_0_15px_rgba(0,255,136,0.4)]"
               >
                 LIVE DEMO
               </motion.div>

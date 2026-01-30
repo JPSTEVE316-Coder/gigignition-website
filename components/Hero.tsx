@@ -113,21 +113,21 @@ export default function Hero() {
         >
           <div className="flex flex-col items-center gap-1">
             <div className="font-orbitron text-3xl lg:text-4xl font-bold">
-              <span className="text-neon-green">20+</span>
+              <span className="text-neon-green">50+</span>
             </div>
             <div className="text-sm text-white/40 font-semibold">AI Hustles</div>
           </div>
           <div className="flex flex-col items-center gap-1">
             <div className="font-orbitron text-3xl lg:text-4xl font-bold">
-              <span className="text-brand-gold">12</span> <span className="text-white/60 text-xl">days</span>
+              <span className="text-brand-gold">&lt;12</span> <span className="text-white/60 text-xl">days</span>
             </div>
             <div className="text-sm text-white/40 font-semibold">Avg. to First $</div>
           </div>
           <div className="flex flex-col items-center gap-1">
             <div className="font-orbitron text-3xl lg:text-4xl font-bold">
-              $<span className="text-neon-cyan">500</span><span className="text-white/60 text-xl">/wk</span>
+              $<span className="text-neon-cyan">500+</span><span className="text-white/60 text-xl">/wk</span>
             </div>
-            <div className="text-sm text-white/40 font-semibold">Avg. Earnings</div>
+            <div className="text-sm text-white/40 font-semibold">Side Hustles</div>
           </div>
         </motion.div>
       </div>

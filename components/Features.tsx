@@ -13,7 +13,7 @@ const features = [
   {
     icon: MessageCircle,
     title: 'AI Hustle Coach',
-    description: 'Stuck on step 3? Ask your AI coach. Get instant answers, tool links, and workarounds. It knows your progress.',
+    description: 'Your personal coach that speaks to you, motivates you, and inspires action. Get instant answers, encouragement, and guidance tailored to your progress.',
     color: 'neon-cyan',
   },
   {

@@ -35,8 +35,8 @@ export default function CTA() {
               Download for iOS
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="flex items-center justify-center gap-2 bg-transparent text-white px-6 py-3 rounded-full font-orbitron font-semibold text-sm border border-white/[0.15] hover:bg-white/5 hover:border-white/25 transition-all">
-              Download for Android
+            <button className="flex items-center justify-center gap-2 bg-transparent text-white/50 px-6 py-3 rounded-full font-orbitron font-semibold text-sm border border-white/[0.1] cursor-not-allowed">
+              Android Coming Soon
             </button>
           </div>
           

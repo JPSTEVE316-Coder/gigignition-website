@@ -53,7 +53,7 @@ export default function GigTracks() {
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-sm font-bold text-brand-blue uppercase tracking-[0.2em] mb-3 font-orbitron">
-            20+ AI Hustles
+            30+ AI Hustles
           </p>
           <h2 className="font-orbitron text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3">
             Income streams that <span className="gradient-text">did not exist</span> 2 years ago
@@ -108,7 +108,7 @@ export default function GigTracks() {
         {/* Bottom CTA */}
         <div className="text-center mt-6">
           <p className="text-white/40 text-xs font-medium">
-            + 12 more hustles in the app including AI Dating Profiles, AI Music Production, AI Translation & more
+            + dozens more hustles in the app including AI Dating Profiles, AI Music Production, AI Translation & more
           </p>
         </div>
       </div>

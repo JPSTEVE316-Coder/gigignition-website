@@ -48,10 +48,10 @@ const fuelActions = [
 
 const comparison = [
   { feature: 'Monthly fee', them: '$9.99 - $29.99', us: '$0' },
-  { feature: 'Charges when idle', them: 'Yep', us: 'Nope' },
-  { feature: 'Free trial then paywall', them: 'Yep', us: 'Nope' },
+  { feature: 'Charges when idle', them: 'Yes', us: 'No' },
+  { feature: 'Free trial then paywall', them: 'Yes', us: 'No' },
   { feature: 'Coaching included', them: 'Often extra', us: 'Unlimited per hustle' },
-  { feature: 'Credits expire', them: 'Yep', us: 'Never' },
+  { feature: 'Credits expire', them: 'Yes', us: 'Never' },
   { feature: 'Cancel to stop charges', them: 'Required', us: 'Nothing to cancel' },
 ]
 
@@ -195,11 +195,11 @@ export default function Pricing() {
                 <div className="space-y-1.5 mb-4 text-xs">
                   <div className="flex justify-between text-white/60">
                     <span>Hustle Cards</span>
-                    <span className="font-semibold text-white">{pkg.cards}</span>
+                    <span className="font-semibold text-white"><span className="text-white/40 text-[10px]">up to </span>{pkg.cards}</span>
                   </div>
                   <div className="flex justify-between text-white/60">
                     <span>Reshuffles</span>
-                    <span className="font-semibold text-white">{pkg.reshuffles}</span>
+                    <span className="font-semibold text-white"><span className="text-white/40 text-[10px]">up to </span>{pkg.reshuffles}</span>
                   </div>
                   <div className="flex justify-between text-white/60">
                     <span>Per Fuel</span>
@@ -238,7 +238,7 @@ export default function Pricing() {
           className="bg-bg-card border border-white/[0.08] rounded-2xl p-5 lg:p-6 mb-8"
         >
           <h3 className="font-orbitron font-bold text-lg text-center mb-5">
-            Why PAYG <span className="text-neon-green">Wins</span>
+            Why People <span className="text-neon-green">Love</span> Gig Ignition
           </h3>
           
           {/* Mobile-friendly comparison cards */}
@@ -249,11 +249,11 @@ export default function Pricing() {
                 <div className="grid grid-cols-2 gap-2">
                   <div className="text-center p-2 rounded-lg bg-neon-orange/10 border border-neon-orange/20">
                     <p className="text-[9px] text-neon-orange/60 uppercase tracking-wider mb-0.5">Them</p>
-                    <span className={`text-xs font-semibold ${row.them === 'Yep' ? 'text-neon-orange' : 'text-neon-orange'}`}>{row.them}</span>
+                    <span className="text-xs font-semibold text-neon-orange">{row.them}</span>
                   </div>
                   <div className="text-center p-2 rounded-lg bg-neon-green/10 border border-neon-green/20">
                     <p className="text-[9px] text-neon-green/60 uppercase tracking-wider mb-0.5">Us</p>
-                    <span className={`text-xs font-semibold ${row.us === 'Nope' ? 'text-neon-green' : 'text-neon-green'}`}>{row.us}</span>
+                    <span className="text-xs font-semibold text-neon-green">{row.us}</span>
                   </div>
                 </div>
               </div>
