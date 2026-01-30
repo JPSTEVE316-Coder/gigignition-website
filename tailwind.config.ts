@@ -6,6 +6,22 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    // Dynamic color classes used via template literals in components
+    ...['brand-blue', 'brand-gold', 'neon-green', 'neon-orange', 'neon-cyan', 'neon-purple'].flatMap(color => [
+      `text-${color}`,
+      `bg-${color}`,
+      `bg-${color}/10`,
+      `bg-${color}/20`,
+      `border-${color}`,
+      `border-${color}/30`,
+      `border-${color}/40`,
+      `border-${color}/50`,
+      `text-${color}/60`,
+      `via-${color}`,
+      `shadow-${color}`,
+    ]),
+  ],
   theme: {
     extend: {
       colors: {

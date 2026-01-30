@@ -113,7 +113,7 @@ export default function Hero() {
         >
           <div className="flex flex-col items-center gap-1">
             <div className="font-orbitron text-3xl lg:text-4xl font-bold">
-              <span className="text-neon-green">50+</span>
+              <span className="text-neon-green">30+</span>
             </div>
             <div className="text-sm text-white/40 font-semibold">AI Hustles</div>
           </div>

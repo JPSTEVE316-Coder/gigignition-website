@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
+import SocialProof from '@/components/SocialProof'
 import Demo from '@/components/Demo'
 import GigTracks from '@/components/GigTracks'
 import Pricing from '@/components/Pricing'
@@ -39,6 +40,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <HowItWorks />
+      <SocialProof />
       <Demo />
       <GigTracks />
       <Pricing />

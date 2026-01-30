@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gigignition.com'),
   title: 'Gig Ignition | AI-Powered Side Hustles',
   description: 'Swipe your way to your first side hustle. AI-powered income opportunities matched to your skills. Stop scrolling. Start earning.',
   openGraph: {
