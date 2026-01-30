@@ -30,6 +30,9 @@ export default function Navbar() {
           <Link href="#hustles" className="text-white/60 hover:text-white text-sm font-semibold tracking-wide transition-colors">
             AI Hustles
           </Link>
+          <Link href="#pricing" className="text-white/60 hover:text-white text-sm font-semibold tracking-wide transition-colors">
+            Pricing
+          </Link>
           <Link href="#features" className="text-white/60 hover:text-white text-sm font-semibold tracking-wide transition-colors">
             Features
           </Link>
