@@ -1,114 +1,79 @@
-# Gig Ignition 🚀
+# Gig Ignition
 
-**Turn Downtime into Uptime** — The AI Coach that matches you to the perfect side hustle and guides you to your first $1,000.
+**Your Side Hustle, Engineered** — AI-powered gig matching that actually works.
+
+![Gig Ignition](public/logo.png)
+
+## Overview
+
+Gig Ignition is a premium landing page for an AI-powered side hustle platform targeting young adults (18-30). The design features a dark, sophisticated aesthetic with blue and gold accents.
 
 ## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-- **Language**: TypeScript
+- **Typography**: Syne (display) + Outfit (body)
 - **Deployment**: Vercel
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/gig-ignition.git
-cd gig-ignition
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-3. Run the development server:
-```bash
+# Run development server
 npm run dev
-# or
-yarn dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Deploy to Vercel
+
+1. Push this repository to GitHub
+2. Connect to [Vercel](https://vercel.com)
+3. Import the repository
+4. Deploy (zero configuration needed)
 
 ## Project Structure
 
 ```
 gig-ignition/
 ├── app/
-│   ├── globals.css      # Global styles + Tailwind
-│   ├── layout.tsx       # Root layout with fonts & metadata
-│   ├── page.tsx         # Home page
-│   └── sitemap.ts       # SEO sitemap
+│   ├── globals.css      # Global styles & Tailwind
+│   ├── layout.tsx       # Root layout with metadata
+│   └── page.tsx         # Main page component
 ├── components/
 │   ├── Navbar.tsx       # Navigation bar
 │   ├── Hero.tsx         # Hero section
-│   ├── IgnitionEngine.tsx   # How it works
-│   ├── HustleTracks.tsx     # Trading cards
-│   ├── SocialProof.tsx      # Live wins + safety
-│   ├── ParentalIntel.tsx    # For parents section
-│   ├── CTASection.tsx       # Call to action
-│   ├── Footer.tsx           # Footer
-│   └── BackgroundEffects.tsx # Particles & grid
+│   ├── HowItWorks.tsx   # 3-step process
+│   ├── GigTracks.tsx    # Gig categories
+│   ├── SocialProof.tsx  # Ticker & stats
+│   ├── Features.tsx     # Feature grid
+│   ├── CTA.tsx          # Call-to-action
+│   └── Footer.tsx       # Footer
 ├── public/
-│   └── Gigignition-Logo.jpg # Logo asset
-├── package.json
+│   └── logo.png         # Logo asset
+├── next.config.js
 ├── tailwind.config.ts
 ├── tsconfig.json
-└── next.config.js
+└── package.json
 ```
 
-## Deployment to Vercel
+## Features
 
-### Option 1: Deploy via GitHub (Recommended)
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "New Project"
-4. Import your GitHub repository
-5. Vercel will auto-detect Next.js and configure everything
-6. Click "Deploy"
-
-### Option 2: Deploy via Vercel CLI
-
-```bash
-npm i -g vercel
-vercel
-```
-
-## Design System: "Solar Velocity"
-
-### Colors
-- **Stratosphere Blue**: `#007AFF` (Primary)
-- **Ignition Gold**: `#FFD700` (Accent)
-- **Deep Navy**: `#0F172A` (Text)
-- **Canvas White**: `#FFFFFF` (Background)
-
-### Typography
-- **Headlines**: Orbitron (NASA/Launch feel)
-- **Body**: DM Sans
-
-### Key Features
-- Glassmorphism cards
-- 3D tilting trading cards
-- Floating particle animations
-- Smooth scroll animations
-- Responsive design
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Sections fit within viewport on desktop/laptop
+- ✅ Smooth scroll animations
+- ✅ Interactive cursor glow effect
+- ✅ Animated logo with orbiting elements
+- ✅ Auto-scrolling social proof ticker
+- ✅ Dark premium aesthetic
 
 ## License
 
-MIT License - feel free to use for your own projects!
-
----
-
-Built with 💛 by Gig Ignition Team
+Private - All rights reserved.

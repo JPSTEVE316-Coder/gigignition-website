@@ -1,40 +1,13 @@
 import type { Metadata } from 'next'
-import { Orbitron, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  variable: '--font-orbitron',
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
-  title: 'Gig Ignition | Turn Downtime into Uptime',
-  description: 'The AI Coach that matches you to the perfect side hustle and guides you to your first $1,000. No boss. Just you and the ignition.',
+  title: 'Gig Ignition | Your Side Hustle, Engineered',
+  description: 'AI-powered gig matching that actually works. Get matched to opportunities that fit your skills, schedule, and income goals. No gatekeeping. Just results.',
   openGraph: {
-    title: 'Gig Ignition: Start Earning Today',
-    description: 'The AI Coach that matches you to the perfect side hustle and guides you to your first $1,000.',
-    type: 'website',
-    images: [
-      {
-        url: '/Gigignition-Logo.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Gig Ignition Logo',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Gig Ignition: Start Earning Today',
-    description: 'The AI Coach that matches you to the perfect side hustle and guides you to your first $1,000.',
-    images: ['/Gigignition-Logo.jpg'],
+    title: 'Gig Ignition: Your Side Hustle, Engineered',
+    description: 'AI-powered gig matching. Real money. Zero gatekeeping. Join 50,000+ hustlers already earning.',
+    images: ['/logo.png'],
   },
 }
 
@@ -44,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${dmSans.variable}`}>
-      <body className="font-dm antialiased">
+    <html lang="en">
+      <body>
+        <div className="grain" />
+        <div className="mesh-bg" />
         {children}
       </body>
     </html>

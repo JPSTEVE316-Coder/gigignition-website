@@ -1,123 +1,102 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { ArrowRight, Play } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-32 pb-16 px-6 relative z-10 bg-gradient-to-b from-white to-slate-50">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-24 pb-12 lg:py-0 relative z-10">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Content */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-stratosphere/10 border border-stratosphere/20 px-4 py-2 rounded-full text-sm font-semibold text-stratosphere mb-6"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-            Don&apos;t just save money. Make it.
-          </motion.div>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-[#161B22] border border-white/[0.08] px-4 py-2 rounded-full text-sm font-medium text-white/60 mb-6">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            50,000+ active hustlers
+          </div>
 
-          <h1 className="font-orbitron text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-            Turn Downtime
+          {/* Headline */}
+          <h1 className="font-syne text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
+            Your side hustle,
             <br />
-            into{' '}
-            <motion.span
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-ignition-gold"
-              style={{ textShadow: '0 0 40px rgba(255, 215, 0, 0.4)' }}
-            >
-              Uptime.
-            </motion.span>
+            <span className="gradient-text">engineered.</span>
           </h1>
 
-          <p className="text-xl text-navy-muted leading-relaxed mb-10 max-w-xl">
-            The AI Coach that matches you to the perfect side hustle and guides you to your first $1,000. No boss. Just you and the ignition.
+          {/* Subtitle */}
+          <p className="text-lg lg:text-xl text-white/60 leading-relaxed mb-8 max-w-xl">
+            AI-powered gig matching that actually works. Get matched to opportunities 
+            that fit your skills, schedule, and income goals. No gatekeeping. Just results.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#" className="btn-primary font-orbitron">
-              LAUNCH APP
-              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </Link>
-            <Link href="#" className="btn-secondary font-orbitron text-navy">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="M21 21l-4.35-4.35"/>
-              </svg>
-              FIND MY GIG
-            </Link>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <button className="group flex items-center justify-center gap-3 bg-gradient-to-br from-[#0099FF] to-[#0066CC] text-white px-8 py-4 rounded-full font-semibold text-base shadow-[0_0_40px_rgba(0,153,255,0.4)] hover:shadow-[0_10px_50px_rgba(0,153,255,0.5)] hover:-translate-y-1 transition-all">
+              Start Earning
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="flex items-center justify-center gap-3 bg-transparent text-white px-8 py-4 rounded-full font-semibold text-base border border-white/[0.08] hover:bg-[#161B22] hover:border-white/[0.15] transition-all">
+              <Play className="w-5 h-5" />
+              See How It Works
+            </button>
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-wrap gap-8 lg:gap-12">
+            <div className="flex flex-col gap-1">
+              <div className="font-syne text-2xl lg:text-3xl font-bold">
+                $<span className="text-[#F5A623]">2.4M</span>
+              </div>
+              <div className="text-sm text-white/40 font-medium">Paid out this month</div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="font-syne text-2xl lg:text-3xl font-bold">
+                4.9<span className="text-[#F5A623]">★</span>
+              </div>
+              <div className="text-sm text-white/40 font-medium">App Store rating</div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="font-syne text-2xl lg:text-3xl font-bold">
+                <span className="text-[#F5A623]">3</span>min
+              </div>
+              <div className="text-sm text-white/40 font-medium">Avg. time to first gig</div>
+            </div>
           </div>
         </motion.div>
 
         {/* Visual */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-          className="relative flex justify-center items-center lg:order-last order-first"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative flex items-center justify-center order-first lg:order-last"
         >
-          <div className="relative w-[400px] h-[500px]">
-            {/* Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-stratosphere/20 animate-pulse-glow" />
+          <div className="relative w-[300px] h-[380px] lg:w-[400px] lg:h-[480px]">
+            {/* Outer Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] lg:w-[380px] h-[300px] lg:h-[380px] rounded-full bg-[radial-gradient(circle,rgba(0,153,255,0.4)_0%,transparent_70%)] blur-[40px] animate-breathe" />
             
-            {/* Exhaust Trail */}
-            <div className="absolute bottom-[60px] left-1/2 -translate-x-1/2 w-20 h-[200px] exhaust-trail animate-exhaust" />
+            {/* Inner Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] lg:w-[250px] h-[200px] lg:h-[250px] rounded-full bg-[radial-gradient(circle,rgba(245,166,35,0.4)_0%,transparent_70%)] blur-[30px] animate-breathe [animation-delay:0.5s]" />
+            
+            {/* Orbit */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] lg:w-[340px] h-[260px] lg:h-[340px] border border-dashed border-white/[0.08] rounded-full animate-spin-slow">
+              <div className="absolute -top-1.5 left-1/2 w-3 h-3 bg-[#0099FF] rounded-full shadow-[0_0_20px_rgba(0,153,255,0.4)]" />
+              <div className="absolute -bottom-1.5 left-1/2 w-3 h-3 bg-[#0099FF] rounded-full shadow-[0_0_20px_rgba(0,153,255,0.4)]" />
+              <div className="absolute top-1/2 -right-1.5 w-3 h-3 bg-[#0099FF] rounded-full shadow-[0_0_20px_rgba(0,153,255,0.4)]" />
+            </div>
             
             {/* Logo */}
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
-            >
-              <Image
-                src="/Gigignition-Logo.jpg"
-                alt="Gig Ignition Rocket"
-                width={220}
-                height={220}
-                className="rounded-[40px] shadow-2xl shadow-stratosphere/30"
-                priority
-              />
-            </motion.div>
-
-            {/* Floating Coins */}
-            {[
-              { top: '70%', left: '20%', delay: 0 },
-              { top: '75%', left: '75%', delay: 0.5 },
-              { top: '60%', left: '15%', delay: 1 },
-              { top: '65%', left: '80%', delay: 1.5 },
-            ].map((coin, i) => (
-              <motion.div
-                key={i}
-                animate={{
-                  y: [0, -20, 0],
-                  rotate: [0, 180, 360],
-                  opacity: [0.8, 1, 0.8],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: coin.delay,
-                  ease: 'easeInOut',
-                }}
-                className="absolute w-6 h-6 rounded-full coin flex items-center justify-center text-xs font-bold text-black/30"
-                style={{ top: coin.top, left: coin.left }}
-              >
-                $
-              </motion.div>
-            ))}
+            <Image 
+              src="/logo.png" 
+              alt="Gig Ignition" 
+              width={280} 
+              height={280}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] lg:w-[240px] h-auto z-10 animate-float drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+            />
           </div>
         </motion.div>
       </div>

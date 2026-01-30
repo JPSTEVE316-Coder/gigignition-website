@@ -1,102 +1,61 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { Twitter, Instagram, Linkedin } from 'lucide-react'
 
 const footerLinks = {
-  product: [
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Hustle Tracks', href: '#tracks' },
-    { label: 'Pricing', href: '#' },
-    { label: 'Download', href: '#' },
-  ],
-  resources: [
-    { label: 'The Playbook (Blog)', href: '#' },
-    { label: 'Safety Guide', href: '#' },
-    { label: 'Help Center', href: '#' },
-    { label: 'Community', href: '#' },
-  ],
-  company: [
-    { label: 'About Us', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Press', href: '#' },
-    { label: 'Contact', href: '#' },
-  ],
+  Product: ['How It Works', 'Gig Tracks', 'Pricing', 'Download'],
+  Resources: ['The Playbook', 'Success Stories', 'Help Center', 'Community'],
+  Company: ['About', 'Careers', 'Press', 'Contact'],
 }
 
 export default function Footer() {
   return (
-    <footer className="bg-navy pt-16 pb-8 px-6 relative z-10">
+    <footer className="px-6 lg:px-12 pt-16 pb-8 border-t border-white/[0.08] relative z-10">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12 pb-12 border-b border-white/10">
+        {/* Main Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <Image
-              src="/Gigignition-Logo.jpg"
-              alt="Gig Ignition"
-              width={48}
-              height={48}
-              className="rounded-xl mb-4"
-            />
-            <p className="text-white/60 leading-relaxed max-w-xs">
-              The AI-powered side hustle coach that takes you from broke and bored to earning your first $1,000. Safe. Smart. Simple.
+          <div className="col-span-2">
+            <Image src="/logo.png" alt="Gig Ignition" width={48} height={48} className="h-12 w-auto mb-4" />
+            <p className="text-white/40 text-sm leading-relaxed max-w-[280px]">
+              AI-powered gig matching for the modern hustler. Stop scrolling. Start earning.
             </p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="font-orbitron font-bold text-white text-sm mb-5 tracking-wide">
-              PRODUCT
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/60 hover:text-ignition-gold transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-orbitron font-bold text-white text-sm mb-5 tracking-wide">
-              RESOURCES
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/60 hover:text-ignition-gold transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-orbitron font-bold text-white text-sm mb-5 tracking-wide">
-              COMPANY
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/60 hover:text-ignition-gold transition-colors text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Links */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h4 className="font-semibold text-sm mb-5 text-white">{category}</h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link}>
+                    <Link href="#" className="text-white/40 text-sm hover:text-white transition-colors">
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-white/40 text-sm">
-            <span className="text-ignition-gold font-orbitron font-semibold">Gig Ignition</span> — Fuel Your Future.
-          </div>
-          <div className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Gig Ignition. All rights reserved.
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/[0.08] gap-4">
+          <p className="text-white/40 text-sm">
+            © 2026 <span className="text-[#F5A623] font-semibold">Gig Ignition</span>. Fuel your future.
+          </p>
+          <div className="flex gap-3">
+            {[Twitter, Instagram, Linkedin].map((Icon, i) => (
+              <Link
+                key={i}
+                href="#"
+                className="w-10 h-10 flex items-center justify-center bg-[#161B22] border border-white/[0.08] rounded-xl text-white/60 hover:text-white hover:border-white/[0.15] transition-all"
+              >
+                <Icon className="w-[18px] h-[18px]" />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
