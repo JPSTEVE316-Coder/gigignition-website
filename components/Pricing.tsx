@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, X, Zap, Flame, Rocket, Shield, HelpCircle, ChevronDown } from 'lucide-react'
+import { Check, X, Zap, Rocket, Shield, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 
 const fuelPackages = [
@@ -13,8 +13,6 @@ const fuelPackages = [
     cards: 5,
     reshuffles: 10,
     color: 'neon-cyan',
-    colorHex: '#00D4FF',
-    popular: false,
     badge: null,
   },
   {
@@ -25,8 +23,6 @@ const fuelPackages = [
     cards: 12,
     reshuffles: 25,
     color: 'neon-orange',
-    colorHex: '#FF6B35',
-    popular: true,
     badge: 'POPULAR',
   },
   {
@@ -37,8 +33,6 @@ const fuelPackages = [
     cards: 25,
     reshuffles: 50,
     color: 'neon-green',
-    colorHex: '#00FF88',
-    popular: false,
     badge: 'BEST VALUE',
   },
 ]
@@ -72,11 +66,11 @@ const faqs = [
   },
   {
     q: 'Is coaching really unlimited?',
-    a: 'Yes! Once you ignite a hustle card, you get unlimited access to our AI Hustle Coach for that specific hustle. Ask as many questions as you want — no extra cost.',
+    a: 'Yes! Once you ignite a hustle card, you get unlimited access to our AI Hustle Coach for that specific hustle. Ask as many questions as you want, no extra cost.',
   },
   {
-    q: "What's the Loss Shield?",
-    a: 'If a hustle doesn\'t work out after 7+ days of trying, mark it as "Failed" and we\'ll refund 50% of the Fuel you spent. We believe in your journey.',
+    q: 'What is the Loss Shield?',
+    a: 'If a hustle does not work out after 7+ days of trying, mark it as Failed and we will refund 50% of the Fuel you spent. We believe in your journey.',
   },
 ]
 
@@ -95,7 +89,7 @@ export default function Pricing() {
             No subscriptions. <span className="text-neon-green">No tricks.</span>
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium">
-            Your side hustle shouldn't cost a side hustle. Pay only when you ignite — core features free forever.
+            Your side hustle should not cost a side hustle. Pay only when you ignite - core features free forever.
           </p>
         </div>
 
@@ -154,7 +148,7 @@ export default function Pricing() {
             ))}
           </div>
           <p className="text-center text-neon-cyan text-sm font-semibold mt-4">
-            ✨ Coaching is UNLIMITED once you ignite a card — no per-question fees!
+            Coaching is UNLIMITED once you ignite a card - no per-question fees!
           </p>
         </div>
 
@@ -174,7 +168,7 @@ export default function Pricing() {
                 className={`relative bg-bg-card border rounded-2xl p-6 transition-all hover:-translate-y-1 ${
                   pkg.badge === 'BEST VALUE'
                     ? 'border-neon-green/50 shadow-[0_0_30px_rgba(0,255,136,0.15)]' 
-                    : pkg.popular
+                    : pkg.badge === 'POPULAR'
                     ? 'border-neon-orange/50 shadow-[0_0_30px_rgba(255,107,53,0.15)]'
                     : 'border-white/[0.08] hover:border-white/[0.15]'
                 }`}
@@ -220,7 +214,7 @@ export default function Pricing() {
                   <button className={`w-full py-3 rounded-xl font-orbitron font-semibold text-sm transition-all ${
                     pkg.badge === 'BEST VALUE'
                       ? 'bg-neon-green text-midnight hover:bg-neon-green/90'
-                      : pkg.popular
+                      : pkg.badge === 'POPULAR'
                       ? 'bg-neon-orange text-midnight hover:bg-neon-orange/90'
                       : 'bg-white/10 text-white hover:bg-white/20'
                   }`}>
@@ -231,7 +225,7 @@ export default function Pricing() {
             ))}
           </div>
           <p className="text-center text-white/40 text-sm mt-4">
-            One-time purchase • No subscription • Fuel never expires
+            One-time purchase - No subscription - Fuel never expires
           </p>
         </div>
 
@@ -283,7 +277,7 @@ export default function Pricing() {
                   <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
                   <p className="text-[10px] text-white/40">Subscription apps</p>
                 </div>
-                <div className="text-2xl text-white/30">→</div>
+                <div className="text-2xl text-white/30">&rarr;</div>
                 <div className="text-right">
                   <p className="font-orbitron text-2xl font-bold text-neon-green">~$12/yr</p>
                   <p className="text-[10px] text-white/40">Gig Ignition</p>
@@ -297,14 +291,13 @@ export default function Pricing() {
                   <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
                   <p className="text-[10px] text-white/40">Subscription apps</p>
                 </div>
-                <div className="text-2xl text-white/30">→</div>
+                <div className="text-2xl text-white/30">&rarr;</div>
                 <div className="text-right">
                   <p className="font-orbitron text-2xl font-bold text-neon-green">~$30/yr</p>
                   <p className="text-[10px] text-white/40">Gig Ignition</p>
                 </div>
               </div>
             </div>
-          </div>
           </div>
 
           <p className="text-center text-white/50 text-sm font-medium">
@@ -324,7 +317,7 @@ export default function Pricing() {
           <div>
             <h4 className="font-orbitron font-bold text-neon-purple mb-1">Loss Shield Protection</h4>
             <p className="text-white/60 text-sm">
-              If you mark a hustle as "Failed" after working on it for 7+ days, we automatically refund 
+              If you mark a hustle as Failed after working on it for 7+ days, we automatically refund 
               <span className="text-neon-purple font-semibold"> 50% of the Fuel</span> you spent on that card. We invest in your learning.
             </p>
           </div>
@@ -368,7 +361,7 @@ export default function Pricing() {
             50 free Fuel. No credit card. Zero commitment.
           </p>
           <button className="group inline-flex items-center justify-center gap-3 bg-gradient-to-br from-brand-blue to-[#1E5FAA] text-white px-8 py-4 rounded-full font-orbitron font-semibold text-base shadow-[0_0_40px_rgba(43,124,212,0.4)] hover:shadow-[0_10px_50px_rgba(43,124,212,0.5)] hover:-translate-y-1 transition-all">
-            Download Free — Get 50 Fuel Instantly
+            Download Free - Get 50 Fuel Instantly
           </button>
         </div>
       </div>
