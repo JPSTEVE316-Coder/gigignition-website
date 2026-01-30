@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, X, Zap, Rocket, Shield, ChevronDown } from 'lucide-react'
+import { Check, Zap, Rocket, Shield, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 
 const fuelPackages = [
@@ -48,10 +48,10 @@ const fuelActions = [
 
 const comparison = [
   { feature: 'Monthly fee', them: '$9.99 - $29.99', us: '$0' },
-  { feature: 'Charges when idle', them: true, us: false },
-  { feature: 'Free trial then paywall', them: true, us: false },
+  { feature: 'Charges when idle', them: 'Yep', us: 'Nope' },
+  { feature: 'Free trial then paywall', them: 'Yep', us: 'Nope' },
   { feature: 'Coaching included', them: 'Often extra', us: 'Unlimited per hustle' },
-  { feature: 'Credits expire', them: 'Usually', us: 'Never' },
+  { feature: 'Credits expire', them: 'Yep', us: 'Never' },
   { feature: 'Cancel to stop charges', them: 'Required', us: 'Nothing to cancel' },
 ]
 
@@ -249,19 +249,11 @@ export default function Pricing() {
                 <div className="grid grid-cols-2 gap-3">
                   <div className="text-center p-2 rounded-lg bg-neon-orange/10 border border-neon-orange/20">
                     <p className="text-[10px] text-neon-orange/60 uppercase tracking-wider mb-1">Them</p>
-                    {typeof row.them === 'boolean' ? (
-                      row.them ? <X className="w-5 h-5 text-neon-orange mx-auto" /> : <Check className="w-5 h-5 text-white/30 mx-auto" />
-                    ) : (
-                      <span className="text-neon-orange text-xs font-semibold">{row.them}</span>
-                    )}
+                    <span className={`text-xs font-semibold ${row.them === 'Yep' ? 'text-neon-orange' : 'text-neon-orange'}`}>{row.them}</span>
                   </div>
                   <div className="text-center p-2 rounded-lg bg-neon-green/10 border border-neon-green/20">
                     <p className="text-[10px] text-neon-green/60 uppercase tracking-wider mb-1">Us</p>
-                    {typeof row.us === 'boolean' ? (
-                      row.us ? <Check className="w-5 h-5 text-neon-green mx-auto" /> : <X className="w-5 h-5 text-white/30 mx-auto" />
-                    ) : (
-                      <span className="text-neon-green text-xs font-semibold">{row.us}</span>
-                    )}
+                    <span className={`text-xs font-semibold ${row.us === 'Nope' ? 'text-neon-green' : 'text-neon-green'}`}>{row.us}</span>
                   </div>
                 </div>
               </div>
@@ -270,31 +262,31 @@ export default function Pricing() {
 
           {/* Annual Savings */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-3">Casual User (2 cards/mo)</p>
-              <div className="flex items-center justify-between gap-3">
+            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-5">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-4">Casual User (2 cards/mo)</p>
+              <div className="flex items-center justify-between gap-2">
                 <div>
-                  <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
-                  <p className="text-[10px] text-white/40">Subscription apps</p>
+                  <p className="text-neon-orange font-orbitron text-xl lg:text-2xl font-bold line-through decoration-2">$179.88/yr</p>
+                  <p className="text-xs text-white/40 mt-1">Subscription apps</p>
                 </div>
-                <div className="text-2xl text-white/30">&rarr;</div>
+                <div className="text-3xl text-white/20">&rarr;</div>
                 <div className="text-right">
-                  <p className="font-orbitron text-2xl font-bold text-neon-green">~$12/yr</p>
-                  <p className="text-[10px] text-white/40">Gig Ignition</p>
+                  <p className="font-orbitron text-2xl lg:text-3xl font-bold text-neon-green">~$12/yr</p>
+                  <p className="text-xs text-white/40 mt-1">Gig Ignition</p>
                 </div>
               </div>
             </div>
-            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-4">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-3">Active User (4 cards/mo)</p>
-              <div className="flex items-center justify-between gap-3">
+            <div className="bg-midnight/50 border border-white/[0.05] rounded-xl p-5">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-wider mb-4">Active User (4 cards/mo)</p>
+              <div className="flex items-center justify-between gap-2">
                 <div>
-                  <p className="text-neon-orange/60 line-through text-sm">$179.88/yr</p>
-                  <p className="text-[10px] text-white/40">Subscription apps</p>
+                  <p className="text-neon-orange font-orbitron text-xl lg:text-2xl font-bold line-through decoration-2">$179.88/yr</p>
+                  <p className="text-xs text-white/40 mt-1">Subscription apps</p>
                 </div>
-                <div className="text-2xl text-white/30">&rarr;</div>
+                <div className="text-3xl text-white/20">&rarr;</div>
                 <div className="text-right">
-                  <p className="font-orbitron text-2xl font-bold text-neon-green">~$30/yr</p>
-                  <p className="text-[10px] text-white/40">Gig Ignition</p>
+                  <p className="font-orbitron text-2xl lg:text-3xl font-bold text-neon-green">~$30/yr</p>
+                  <p className="text-xs text-white/40 mt-1">Gig Ignition</p>
                 </div>
               </div>
             </div>
