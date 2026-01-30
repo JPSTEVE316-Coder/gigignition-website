@@ -22,6 +22,7 @@ const config: Config = {
       fontFamily: {
         orbitron: ['Orbitron', 'sans-serif'],
         rajdhani: ['Rajdhani', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       animation: {
         'float': 'float 5s ease-in-out infinite',

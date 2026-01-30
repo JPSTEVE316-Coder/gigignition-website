@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <Image src="/logo.png" alt="Gig Ignition" width={40} height={40} className="h-10 w-auto" />
-              <span className="font-orbitron font-bold text-lg">Gig Ignition</span>
+              <span className="brand-name text-lg text-white">Gig Ignition</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-[280px] font-medium">
               AI-Powered Side Hustles. Swipe to discover, learn to launch, start earning this week.
@@ -47,7 +47,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/[0.08] gap-4">
           <p className="text-white/30 text-sm font-medium">
-            © 2026 <span className="text-brand-gold font-semibold">Gig Ignition</span>. All rights reserved.
+            © 2026 <span className="brand-name text-brand-gold">Gig Ignition</span>. All rights reserved.
           </p>
           <div className="flex gap-3">
             {[Twitter, Instagram, Youtube].map((Icon, i) => (

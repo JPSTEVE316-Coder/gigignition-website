@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="Gig Ignition" width={42} height={42} className="h-[42px] w-auto" />
-          <span className="font-orbitron font-bold text-xl text-white tracking-tight">Gig Ignition</span>
+          <span className="brand-name text-xl text-white">Gig Ignition</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-10">
