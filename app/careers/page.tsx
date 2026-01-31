@@ -5,13 +5,6 @@ import { ArrowLeft, Briefcase, MapPin, Clock, Send, Star, ArrowRight } from 'luc
 
 const openRoles = [
   {
-    title: 'AI Product Manager',
-    department: 'Product',
-    location: 'Remote (US)',
-    type: 'Full-time',
-    description: 'Lead the product vision for our AI-powered hustle matching engine and coaching systems. You\'ll own the roadmap for HustleEngine AI and shape how millions discover their next income stream.',
-  },
-  {
     title: 'Growth Marketing Lead',
     department: 'Marketing',
     location: 'Remote (US)',
@@ -24,13 +17,6 @@ const openRoles = [
     location: 'Remote (US)',
     type: 'Full-time',
     description: 'Build and nurture our community of hustlers. Create engagement programs, moderate discussions, amplify user success stories, and be the voice of our users internally.',
-  },
-  {
-    title: 'Senior Full-Stack Engineer',
-    department: 'Engineering',
-    location: 'Remote (US)',
-    type: 'Full-time',
-    description: 'Build the core platform powering Gig Ignition — from our React Native mobile app to our AI coaching backend. Work with cutting-edge LLMs, real-time systems, and mobile-first architecture.',
   },
 ]
 
