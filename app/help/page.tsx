@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Search, ChevronDown, Mail, MessageCircle, HelpCircle } from 'lucide-react'
+import SupportChat from '@/components/SupportChat'
 
 interface FAQItem {
   question: string
@@ -273,17 +274,32 @@ export default function HelpPage() {
           <MessageCircle className="w-10 h-10 text-neon-green mx-auto mb-4" />
           <h3 className="font-orbitron text-xl font-bold text-white mb-2">Still need help?</h3>
           <p className="text-white/50 text-sm mb-6 max-w-md mx-auto">
-            Can&apos;t find what you&apos;re looking for? Our support team is here to help you succeed.
+            Can&apos;t find what you&apos;re looking for? Chat with Iggy, our AI support agent — available 24/7 and trained on everything Gig Ignition. For complex issues, Iggy can connect you directly with our team.
           </p>
-          <a
-            href="mailto:support@gigignition.com"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-blue rounded-xl text-white font-semibold text-sm hover:bg-brand-blue/90 transition-colors"
-          >
-            <Mail className="w-4 h-4" />
-            support@gigignition.com
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button
+              onClick={() => {
+                // Trigger the chat widget open via custom event
+                window.dispatchEvent(new CustomEvent('open-support-chat'))
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-blue rounded-xl text-white font-semibold text-sm hover:bg-brand-blue/90 transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Chat with Iggy
+            </button>
+            <a
+              href="mailto:support@gigignition.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/[0.05] border border-white/[0.1] rounded-xl text-white/60 font-semibold text-sm hover:text-white hover:border-white/[0.2] transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              Email us directly
+            </a>
+          </div>
         </div>
       </div>
+
+      {/* Support Chat Widget */}
+      <SupportChat />
     </main>
   )
 }
