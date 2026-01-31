@@ -14,13 +14,12 @@ const footerLinks = {
   Resources: [
     { label: 'Hustle Blog', href: '/blog' },
     { label: 'Help Center', href: '/help' },
-    { label: 'Community', href: '#' },
   ],
   Company: [
-    { label: 'About', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Press', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'About', href: '/about' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Press', href: '/press' },
+    { label: 'Contact', href: '/contact' },
   ],
 }
 
