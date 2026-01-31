@@ -23,95 +23,110 @@ const faqData: FAQCategory[] = [
       {
         question: 'What is Gig Ignition and how does it work?',
         answer:
-          'Gig Ignition is an AI-powered app that helps you discover, learn, and launch side hustles. When you open the app, you\'ll see hustle cards you can swipe through — like a dating app, but for income streams. Swipe right on hustles that interest you, and the app gives you a personalized roadmap with step-by-step guidance, AI coaching, and tools to get started earning.',
+          'Gig Ignition is a mobile-first Side Hustle Accelerator app that uses AI to help you discover, plan, and launch side hustles. Start with a quick 3-step onboarding quiz about your time, skills, and income goals. Then our HustleEngine AI matches you with personalized hustle cards in the Ignition Deck — swipe right to IGNITE a hustle and get a step-by-step Mission Center with AI coaching to guide you from idea to first dollar.',
       },
       {
         question: 'Do I need any experience to use Gig Ignition?',
         answer:
-          'Not at all. Gig Ignition is designed for complete beginners. The AI coach adapts to your skill level and walks you through everything from setting up your first gig profile to landing your first client. Each hustle track includes beginner-friendly tutorials, templates, and scripts you can use right away.',
+          'Not at all. Gig Ignition is designed for complete beginners. The AI Hustle Coach adapts to your skill level and walks you through every step — from setting up your first gig profile to landing your first client. Each hustle card comes with a guided Mission Center checklist, and you can tap "Ask Coach" at any step for personalized AI guidance, including voice responses.',
       },
       {
         question: 'How quickly can I start earning money?',
         answer:
-          'Many of our hustle tracks are designed to generate income within your first week. Some quick-start hustles like AI freelance writing or social media management can land you your first paying gig within days. The timeline depends on the hustle you choose and how much time you invest, but the app is built to minimize your time-to-first-dollar.',
+          'Many of our hustle cards are designed to get you earning within your first week. Some quick-start hustles like AI freelance writing or social media management can land you your first paying gig within days. The app tracks your progress toward a "First Dollar" milestone celebration, and the AI Coach keeps you accountable with step-specific guidance.',
       },
       {
         question: 'What devices is Gig Ignition available on?',
         answer:
-          'Gig Ignition is available on iOS and Android. Download it from the App Store or Google Play. You can also access your dashboard and training materials via our web app at app.gigignition.com.',
+          'Gig Ignition is available on iOS and Android. Download it from the App Store or Google Play.',
+      },
+      {
+        question: 'How does the onboarding work?',
+        answer:
+          'When you first open the app, you\'ll complete a quick 3-step quiz: (1) your time availability — whether you have 1 hour a day, weekends, or full-time, (2) your skills and superpowers — creative, tech, physical, or none, and (3) your income goals — from $50/day to $2,000+/month. Our HustleEngine AI uses your answers to match you with the most relevant side hustles from our curated database.',
       },
     ],
   },
   {
-    name: 'Account & Billing',
-    icon: '💳',
+    name: 'Ignition Fuel & Pricing',
+    icon: '⛽',
     items: [
       {
-        question: 'What are the different pricing plans?',
+        question: 'How does pricing work? Is it a subscription?',
         answer:
-          'We offer three tiers: Free Spark (limited to 3 hustle tracks with basic AI coaching), Pro Flame at $9/month (unlimited hustles, full AI coach, templates, and community access), and Elite Inferno at $29/month (everything in Pro plus 1-on-1 AI strategy sessions, premium templates, Loss Shield protection, and priority support).',
+          'Gig Ignition uses a pay-as-you-go model called "Ignition Fuel" — no subscriptions, no monthly fees. You purchase Fuel when you need it. Every new user gets 50 Fuel Units free at signup, enough to IGNITE 2 hustle cards and reshuffle your deck once. Once you see the value, you can buy more Fuel in packs.',
       },
       {
-        question: 'Can I cancel my subscription at any time?',
+        question: 'What does Fuel cost and what are the packages?',
         answer:
-          'Yes — no contracts, no cancellation fees. You can cancel directly from your account settings at any time. Your access continues until the end of your current billing period. We also offer a 7-day free trial on Pro and Elite plans so you can try before you commit.',
+          'We offer three Fuel packages: Starter (100 Fuel for $2.49 — good for 5 hustle cards or 10 reshuffles), Hustle Pack (250 Fuel for $4.49 — 12 cards or 25 reshuffles, our most popular), and Ignition Bundle (500 Fuel for $7.49 — 25 cards or 50 reshuffles, best value at just $0.015 per Fuel).',
       },
       {
-        question: 'How do I change my plan or update payment info?',
+        question: 'What costs Fuel and what\'s free?',
         answer:
-          'Go to Settings → Subscription in the app. From there you can upgrade, downgrade, or update your payment method. Changes take effect at the start of your next billing cycle. If you upgrade mid-cycle, you\'ll get immediate access to the new features with a prorated charge.',
+          'IGNITING a hustle card costs 20 Fuel — this unlocks its full Mission Center with step-by-step guidance and AI coaching. Reshuffling your Ignition Deck for fresh recommendations costs 10 Fuel. Passing on a card (swiping left) is always free. And once you\'ve ignited a hustle, AI Coaching for that hustle is unlimited at no extra Fuel cost.',
+      },
+      {
+        question: 'What is Loss Shield?',
+        answer:
+          'Loss Shield protects your Fuel investment. If you IGNITE a hustle and mark it as "failed" after giving it at least 7 days of effort, you\'ll receive a 50% Fuel refund (10 Fuel back). It\'s our way of reducing the anxiety of trying something new — if a hustle doesn\'t work out, you\'re not out the full cost.',
+      },
+      {
+        question: 'How do I check my remaining Fuel?',
+        answer:
+          'Your Fuel balance is displayed at the top of the app dashboard. You can also go to Settings → Ignition Fuel for a detailed breakdown of your usage history and options to purchase more.',
       },
     ],
   },
   {
-    name: 'AI Hustles',
-    icon: '🤖',
+    name: 'Ignition Deck & Hustles',
+    icon: '🃏',
     items: [
       {
-        question: 'How does the swipe-to-discover feature work?',
+        question: 'How does the Ignition Deck work?',
         answer:
-          'Think of it like a dating app for side hustles. The AI analyzes your skills, interests, available time, and income goals to surface the most relevant hustle opportunities. Swipe right to save a hustle to your dashboard, swipe left to skip. The more you swipe, the smarter the recommendations get.',
+          'The Ignition Deck is a Tinder-style discovery experience for side hustles. Our HustleEngine AI matches you with personalized hustle cards based on your onboarding quiz answers. Each card shows the opportunity, estimated earnings, and a virality score showing trending potential. Swipe right to IGNITE (20 Fuel) and unlock the full guided track, or swipe left to PASS for free.',
       },
       {
-        question: 'What types of AI hustles are available?',
+        question: 'How many side hustles are available?',
         answer:
-          'We currently feature 50+ hustle tracks across categories like Content Creation (writing, video, design), Services (chatbot setup, voice-overs, consulting), E-commerce (product descriptions, store optimization), and Education (tutoring, course creation). New tracks are added every month based on market trends.',
+          'We currently feature 40+ curated side hustles, including 20+ AI-powered opportunities specifically targeting Gen Z preferences. Categories span content creation, freelance services, e-commerce, coaching, and more. New hustles are added regularly based on market trends and user demand.',
       },
       {
-        question: 'How does the AI Coach help me?',
+        question: 'How does the AI Hustle Coach work?',
         answer:
-          'The AI Coach is your personal side-hustle mentor. It reviews your progress, suggests next steps, helps you write client proposals, critiques your work, and answers questions 24/7. Think of it as having a knowledgeable friend who\'s always available to brainstorm, troubleshoot, and keep you accountable.',
+          'The AI Hustle Coach is your personal side-hustle mentor, powered by GPT-4o-mini. It\'s context-aware — it knows exactly which hustle you\'re working on and which step you\'re at. You can ask it questions, get personalized guidance, and even listen to voice-enabled responses via text-to-speech. It automatically suggests relevant tools and resources like Fiverr, Canva, Etsy, and Stripe. Use the quick-action buttons ("What\'s next?" or "I\'m stuck!") for instant help.',
+      },
+      {
+        question: 'What is the Mission Center?',
+        answer:
+          'Once you IGNITE a hustle card, it moves to your Mission Center — a step-by-step execution dashboard. You\'ll see a visual checklist of everything you need to do, with haptic feedback when you complete each step. At any point, tap "Ask Coach" for AI guidance specific to your current step. The Mission Center tracks your progress and helps you stay on course toward your first earnings.',
       },
       {
         question: 'Can I work on multiple hustles at once?',
         answer:
-          'Yes! Pro and Elite users can pursue unlimited hustle tracks simultaneously. However, we recommend focusing on one hustle until you\'re earning consistently before branching out. The AI Coach will help you decide when you\'re ready to diversify.',
+          'Absolutely! You can IGNITE as many hustle cards as you want (each costs 20 Fuel). However, we recommend focusing on one hustle until you\'re earning consistently before branching out. The AI Coach will help you decide when you\'re ready to diversify your income streams.',
       },
     ],
   },
   {
-    name: 'Fuel & Credits',
-    icon: '⛽',
+    name: 'Earnings & Gamification',
+    icon: '🏆',
     items: [
       {
-        question: 'What are Fuel Credits?',
+        question: 'How does the Earnings Dashboard work?',
         answer:
-          'Fuel Credits are the in-app currency that powers advanced AI features. They\'re used for things like AI Coach conversations, advanced template generation, market research reports, and premium tool access. Free users get 50 credits/month, Pro gets 500, and Elite gets unlimited.',
+          'The Earnings Dashboard lets you track projected vs actual income for each hustle you\'ve ignited. See weekly breakdowns of your progress and celebrate milestones — including the coveted "First Dollar" celebration when you earn your initial income from a side hustle.',
       },
       {
-        question: 'Can I buy additional Fuel Credits?',
+        question: 'What are achievements and streaks?',
         answer:
-          'Yes. If you run out of credits before your monthly refresh, you can purchase top-up packs: 100 credits for $3, 500 credits for $12, or 1,000 credits for $20. Credits never expire, so unused purchased credits roll over.',
+          'Gig Ignition includes a full gamification system to keep you motivated. Build daily streaks by working on your hustles consistently, and unlock 8 unique achievements as you hit milestones. When you accomplish something big, you\'ll get an "Ignition Moment" celebration with confetti and a shareable card you can post on social media.',
       },
       {
-        question: 'What is Loss Shield and how does it work?',
+        question: 'Can I share my progress on social media?',
         answer:
-          'Loss Shield is an Elite-tier feature that protects your investment. If you follow a hustle track\'s recommended steps and don\'t earn at least the cost of your subscription within 60 days, we\'ll credit your next two months free. It\'s our way of putting skin in the game alongside you.',
-      },
-      {
-        question: 'How do I check my remaining Fuel Credits?',
-        answer:
-          'Your credit balance is displayed at the top of the app dashboard. You can also go to Settings → Fuel Credits for a detailed breakdown of usage history, upcoming refresh date, and options to purchase more.',
+          'Yes! Gig Ignition automatically generates shareable Win Cards (optimized for Instagram Stories, TikTok, and Reels at 1080x1920). You can share your achievements, milestones, and earnings celebrations directly to social platforms. There\'s also a "Clone My Success" deep link feature that lets friends see and start the same hustle you\'re crushing.',
       },
     ],
   },

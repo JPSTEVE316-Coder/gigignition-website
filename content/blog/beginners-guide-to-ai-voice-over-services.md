@@ -77,4 +77,4 @@ A focused voice-over side hustle using AI tools can realistically generate:
 
 The key advantage over traditional voice-over work is speed. What used to take hours of recording and editing now takes minutes of prompting and fine-tuning.
 
-Browse the AI Voice-Over hustle track on Gig Ignition for a complete guided walkthrough, including prompt templates and client outreach scripts.
+IGNITE the AI Voice-Over hustle card on Gig Ignition for a complete guided walkthrough in the Mission Center, including prompt templates, client outreach scripts, and unlimited AI coaching to get you earning.

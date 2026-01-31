@@ -43,4 +43,4 @@ Small brands need consistent social content but can't afford a marketing agency.
 
 Every one of these hustles follows the same formula: **use AI to handle the heavy lifting, then add your human judgment and personal touch.** Clients aren't paying for raw AI output — they're paying for results, delivered reliably, by someone who understands their needs.
 
-Open Gig Ignition, swipe through the AI hustle cards, and pick the one that matches your skills. Your first dollar is closer than you think.
+Open Gig Ignition, swipe through the Ignition Deck, and IGNITE the hustle card that matches your skills. Your AI Hustle Coach and Mission Center will guide you every step of the way. Your first dollar is closer than you think.

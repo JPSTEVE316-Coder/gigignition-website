@@ -58,4 +58,4 @@ Overdeliver on your first project. Include a bonus — an extra email, an additi
 
 Most people who follow this system hit $500 within 7-14 days. The ones who don't usually stalled at Step 4 — they built the skill but didn't put themselves out there. Don't be that person. Ship imperfect proposals. Land the gig. Improve as you go.
 
-Your AI coach inside Gig Ignition can walk you through this entire process, personalized to your skills and schedule. Swipe, learn, earn.
+Your AI Hustle Coach inside Gig Ignition can walk you through this entire process, personalized to your skills and schedule. IGNITE a hustle card, follow the Mission Center steps, and tap "Ask Coach" whenever you need help. Swipe, ignite, earn.
